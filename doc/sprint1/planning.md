@@ -15,24 +15,22 @@ RCOMP 2025-2026: Project 1 - Sprint 1 Planning
 
 # 2. Technical Decisions and Coordination #
 
-During our initial planning, the team agreed on the following technical specifications to ensure consistency across all 
+During our initial planning, the team agreed on the following technical specifications to ensure consistency across all
 terminals:
 
-* **Copper Cable Wiring Standard:** We will adopt the **[T568A ou T568B]** standard for all copper network outlets and 
-patch panels throughout the project.
+* **Copper Cable Wiring Standard:** We will adopt the **[T568A ou T568B]** standard for all copper network outlets and
+  patch panels throughout the project.
 
 * **Campus and Building Backbone:**
-    * **Cable Types:** For the campus backbone connecting the terminals, we will use **[ex: Single-mode Fiber Optic OS2]** cables. 
-    For the vertical building backbones, we will use **CAT7 Copper**.
-  
+    * **Cable Types:** For the campus backbone connecting the terminals, we will use **[]** cables.
+      For the vertical building backbones, we will use **CAT7 Copper**.
+
     * **Cable Passageways:** The campus backbone will utilize the existing underground technical ditch.
-    Inside the buildings, we will use the marked vertical cable passageways, underfloor raceways, and the space over the dropped ceilings.
-  
-    * **Redundancy:** Redundant links will be established between **[ex: Terminal 2 (Main Cross-Connect) and the other Terminals]** to ensure network fault tolerance.
- 
+      Inside the buildings, we will use the marked vertical cable passageways, underfloor raceways, and the space over the dropped ceilings.
 
-* **Other decisions:** **[Adiciona aqui outras decisões que achem relevantes, como o tamanho padrão dos bastidores, o tipo de Access Points, etc., ou apaga este ponto]**.
+    * **Redundancy:** Redundant links will be established between **[]** to ensure network fault tolerance.
 
+    
 ---
 
 # 3. Subtasks Assignment #
