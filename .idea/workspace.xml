@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="" />
+    <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,21 +34,26 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivadu/OneDrive/Documents/GitHub/rcomp-25-26-DI-G2/doc/sprint2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/diogo/OneDrive/Documentos/GitHub/rcomp-25-26-DI-G2/doc/sprint1/1241229/assets&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint1\1241229\assets" />
       <recent name="C:\Users\ivadu\OneDrive\Documents\GitHub\rcomp-25-26-DI-G2\doc\sprint2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint1\1241229\assets" />
+      <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint1\1241229" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -58,6 +69,7 @@
       <workItem from="1772210313793" duration="1038000" />
       <workItem from="1772215535924" duration="3334000" />
       <workItem from="1772287066768" duration="182000" />
+      <workItem from="1772632331410" duration="298000" />
     </task>
     <servers />
   </component>
