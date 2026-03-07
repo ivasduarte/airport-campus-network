@@ -57,7 +57,7 @@
 #### 2.1.3. Access Points Calculations and Positions (ToDo)
 
 > Access Points need to be calculated for each room, individually. <br>
-> For that, we can use an adaptation of the Pythagorean theorem, such as:
+> For that, we can use an adaptation of the Pythagorean theorem, such as, as all the rooms have a rectangular shape:
 > $Length^2 \times Width^2 \leq Diameter^2$
 >
 > **First Equation Member:** Room Measurements <br>
@@ -87,6 +87,25 @@
 | 10   | 24.0         | 18.3        | 910.89                    | 1           |
 | 11   | 10.1         | 10.1        | 204.02                    | 1           |
 | 12   | 10.5         | 10.1        | 212.26                    | 1           |
+
+---
+
+> Other than the predefined rooms, I've divided the remaining of the floor in three distinct spaces. <br>
+> **1.** Space between rooms on the far left of the floor (1 & 2 --> 9 & 10). <br>
+> **2.** Space between rooms 7 and 8, with the exact same length of these rooms. <br>
+> **3.** Remaining of the floor
+
+| Space | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
+|-------|--------------|-------------|---------------------------|-------------|
+| 1     | 49.1         | 129.5       | 19181.06                  | 8           |
+| 2     | 28.8         | 18.3        | 1164.33                   | 1           |
+
+**Extra Calculations for Space 1 AP Amount**
+* If we divide the result obtained by the squared diameter of an AP we obtain 
+the minimum amount of APs required to get a full coverage on the room.
+* $19181.06 \div 2500 = 7.67$, which means at least 8 APs are needed to cover the room.
+
+> **Note:** As **Space 3** is not in a rectangular shape we can't apply the same logic.
 
 ---
 
@@ -122,7 +141,7 @@
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
 
-![Network Outlets Deployment schematic Plan Level 1](assets/EsquemaOutletsLevel1.jpg) (ToDo) <br>
+![Network Outlets Deployment Schematic Plan Level 1](assets/EsquemaOutletsLevel1.jpg) (ToDo) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
 
 ##### Access Points
@@ -136,7 +155,7 @@
 > This schematic shows how to place the APs and their Dedicated Outlets. Because each level requires 16 APs in the exact
 > same positions, this schematic applies to all levels.
 
-![Access Points Schematic](assets/EsquemaAPLevel1.jpg)
+![Access Points Schematic Level 1](assets/EsquemaAPLevel1.jpg)
 
 ---
 
@@ -256,7 +275,7 @@
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
 
-![Network Outlets Deployment schematic Plan Level 4](assets/EsquemaOutletsLevel4.jpg) (ToDo) <br>
+![Network Outlets Deployment Schematic Plan Level 4](assets/EsquemaOutletsLevel4.jpg) (ToDo) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
 
 ---
@@ -272,7 +291,7 @@
 > This schematic shows how to place the APs and their Dedicated Outlets. Because each level requires 16 APs in the exact
 > same positions, this schematic applies to all levels.
 
-![Access Points Schematic](assets/EsquemaAPLevel4.jpg)
+![Access Points Schematic Level 4](assets/EsquemaAPLevel4.jpg)
 
 ---
 
