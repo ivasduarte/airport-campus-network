@@ -91,21 +91,98 @@
 ---
 
 > Other than the predefined rooms, I've divided the remaining of the floor in three distinct spaces. <br>
-> **1.** Space between rooms on the far left of the floor (1 & 2 --> 9 & 10). <br>
-> **2.** Space between rooms 7 and 8, with the exact same length of these rooms. <br>
+> **1.** Space between rooms 7 and 8, with the exact same length of these rooms. <br>
+> **2.** Space between rooms on the far left of the floor (1 & 2 --> 9 & 10). <br>
 > **3.** Remaining of the floor
+>
+> All the above spaces (except for Space 3) are shown in the schematic
+> (labeled as "S$x$", where $x$ is the number of the space)
 
 | Space | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
 |-------|--------------|-------------|---------------------------|-------------|
-| 1     | 49.1         | 129.5       | 19181.06                  | 8           |
-| 2     | 28.8         | 18.3        | 1164.33                   | 1           |
+| 1     | 28.8         | 18.3        | 1164.33                   | 1           |
+| 2     | 49.1         | 129.5       | 19181.06                  | 6           |
 
-**Extra Calculations for Space 1 AP Amount**
-* If we divide the result obtained by the squared diameter of an AP we obtain 
-the minimum amount of APs required to get a full coverage on the room.
-* $19181.06 \div 2500 = 7.67$, which means at least 8 APs are needed to cover the room.
+**Extra Calculations for Space 2 AP Amount** (ToDo)
+
+* To calculate the amount of APs needed for this space we will follow some rules.
+* **1.** If some measurement is less than 90% of 50$m$ (around 45$m$) we can fill the room with only one line of APs.
+  Otherwise, we should add one extra line;
+* **2.** To get the number of lines needed we can use the formula: $n = H \div diameter$;
+* **3.** The first APs to be placed must be the ones that cover the corners;
+*
+* As the space length is less than the AP diameter but greater than 45$m$ we will add two lines of APs to optimize space.
+* Making $49.1 \div 4$ we get the distance the outside lines must have from the wall, which is 12.28$m$
+* With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
+* $y = \sqrt{25^2 - 12.28^2} = 21.78m$
+* **Maximum distance between 2 APs:** $2 * y = 43.56m$
+* **Between First and Last APs of a line:** $85.94 \div 43.56 = 1.97$, which means that we need 1 more APs per line
 
 > **Note:** As **Space 3** is not in a rectangular shape we can't apply the same logic.
+
+**Calculations for Space 3**
+
+> In order to make the calculation of Space 3 APs, we proceeded with its
+> division in multiple rectangular shaped subspaces
+> (shown in the schematic as "E$x$", with $x$ being the number given to the subspace).
+
+---
+
+| Subspace | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
+|----------|--------------|-------------|---------------------------|-------------|
+| 1        | 24.0         | 9.9         | 674.01                    | 1           |
+| 2        | 24.0         | 37.9        | 2012.41                   | 1           |
+| 3        | 56.8         | 26.7        | 3939.13                   | 2           |
+| 4        | 9.7          | 176.6       | 31281.65                  | 4           |
+| 5        | 62.7         | 26.7        | 4644.18                   | 2           |
+| 6        | 10.3         | 33.1        | 1201.7                    | 1           |
+| 7        | 175.6        | 10.5        | 30945.61                  | 4           |
+| 8        | 173.1        | 109.5       | 41953.86                  | 20          |
+
+---
+
+**Extra Calculations for Subspaces that need more than one AP**
+
+* **E3** <br>
+    * As the subspace width is 26.7$m$, only one line of APs will be needed. <br>
+    * $26.7 \div 2 = 13.35m$, which makes the center of the width of the room. <br>
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 13.35^2} = 21.14m$
+    * **Maximum distance between 2 APs:** $2 * x = 42.28m$
+    * **Between First and Last APs:** $14.52 \div 42.28 = 0.34$, which means no intermediate AP is needed
+
+* **E4** <br>
+    * As the subspace length is 9.7$m$, only one line of APs will be needed. <br>
+    * $9.7 \div 2 = 4.85m$, which makes the center of the length of the room. <br>
+    * With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
+    * $y = \sqrt{25^2 - 4.85^2} = 24.5m$
+    * **Maximum distance between 2 APs:** $2 * y = 49m$
+    * **Between First and Last APs:** $127.6 \div 49 = 2.6$, which means that we need 2 more APs for full coverage
+
+* **E5** <br>
+    * As the subspace width is 26.7$m$, only one line of APs will be needed. <br>
+    * $26.7 \div 2 = 13.35m$, which makes the center of the width of the room. <br>
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 13.35^2} = 21.14m$
+    * **Maximum distance between 2 APs:** $2 * x = 42.28m$
+    * **Between First and Last APs:** $20.42 \div 42.28 = 0.48$, which means no intermediate AP is needed
+
+* **E7** <br>
+    * As the subspace width is 10.5$m$, only one line of APs will be needed. <br>
+    * $10.5 \div 2 = 5.25m$, which makes the center of the width of the room. <br>
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 5.25^2} = 24.44m$
+    * **Maximum distance between 2 APs:** $2 * x = 48.88m$
+    * **Between First and Last APs:** $126.72 \div 48.88 = 2.59$, which means that we need 2 more APs for full coverage
+
+* **E8** (Incorrect schematic) <br>
+    * As both measurements are greater than 45$m$, we will need more than one line of APs.
+    * As the subspace length is $173.1$, and $173.1 \div 50 = 3.5$, we will need 4 lines of APs
+    * If we make $173.1 \div 8$, we get the distance the outside lines must have from the wall, which is 21.64$m$
+    * With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
+    * $y = \sqrt{25^2 - 21.64^2} = 12.52m$
+    * **Maximum distance between 2 APs:** $2 * y = 25.04m$
+    * **Between First and Last APs of a line:** $84.46 \div 25.04 = 3.37$, which means that we need 3 more APs per line
 
 ---
 
