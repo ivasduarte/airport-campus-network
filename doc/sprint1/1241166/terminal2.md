@@ -54,7 +54,7 @@
 
 ---
 
-#### 2.1.3. Access Points Calculations and Positions (ToDo)
+#### 2.1.3. Access Points Calculations and Positions
 
 > Access Points need to be calculated for each room, individually. <br>
 > For that, we can use an adaptation of the Pythagorean theorem, such as, as all the rooms have a rectangular shape:
@@ -98,12 +98,16 @@
 > All the above spaces (except for Space 3) are shown in the schematic
 > (labeled as "S$x$", where $x$ is the number of the space)
 
+---
+
 | Space | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
 |-------|--------------|-------------|---------------------------|-------------|
 | 1     | 28.8         | 18.3        | 1164.33                   | 1           |
 | 2     | 49.1         | 129.5       | 19181.06                  | 6           |
 
-**Extra Calculations for Space 2 AP Amount** (ToDo)
+---
+
+**Extra Calculations for Space 2 AP Amount**
 
 * To calculate the amount of APs needed for this space we will follow some rules.
 * **1.** If some measurement is less than 90% of 50$m$ (around 45$m$) we can fill the room with only one line of APs.
@@ -111,7 +115,8 @@
 * **2.** To get the number of lines needed we can use the formula: $n = H \div diameter$;
 * **3.** The first APs to be placed must be the ones that cover the corners;
 *
-* As the space length is less than the AP diameter but greater than 45$m$ we will add two lines of APs to optimize space.
+* As the space length is less than the AP diameter but greater than 45$m$ we will add two lines of APs to optimize
+  space.
 * Making $49.1 \div 4$ we get the distance the outside lines must have from the wall, which is 12.28$m$
 * With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
 * $y = \sqrt{25^2 - 12.28^2} = 21.78m$
@@ -175,9 +180,9 @@
     * **Maximum distance between 2 APs:** $2 * x = 48.88m$
     * **Between First and Last APs:** $126.72 \div 48.88 = 2.59$, which means that we need 2 more APs for full coverage
 
-* **E8** (Incorrect schematic) <br>
+* **E8** <br>
     * As both measurements are greater than 45$m$, we will need more than one line of APs.
-    * As the subspace length is $173.1$, and $173.1 \div 50 = 3.5$, we will need 4 lines of APs
+    * As the subspace length is 173.1$m$, and $173.1 \div 50 = 3.5$, we will need 4 lines of APs
     * If we make $173.1 \div 8$, we get the distance the outside lines must have from the wall, which is 21.64$m$
     * With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
     * $y = \sqrt{25^2 - 21.64^2} = 12.52m$
@@ -190,28 +195,66 @@
 
 | AP   | X ($m$) | Y ($m$) |
 |------|---------|---------|
-| AP1  | 25      | 25      |
-| AP2  | 25      | 75      |
-| AP3  | 25      | 125     |
-| AP4  | 25      | 175     |
-| AP5  | 75      | 25      |
-| AP6  | 75      | 75      |
-| AP7  | 75      | 125     |
-| AP8  | 75      | 175     |
-| AP9  | 125     | 25      |
-| AP10 | 125     | 75      |
-| AP11 | 125     | 125     |
-| AP12 | 125     | 175     |
-| AP13 | 175     | 25      |
-| AP14 | 175     | 75      |
-| AP15 | 175     | 125     |
-| AP16 | 175     | 175     |
+| AP1  |         |         |
+| AP2  |         |         |
+| AP3  |         |         |
+| AP4  |         |         |
+| AP5  |         |         |
+| AP6  |         |         |
+| AP7  |         |         |
+| AP8  |         |         |
+| AP9  |         |         |
+| AP10 |         |         |
+| AP11 |         |         |
+| AP12 |         |         |
+| AP13 |         |         |
+| AP14 |         |         |
+| AP15 |         |         |
+| AP16 |         |         |
+| AP17 |         |         |
+| AP18 |         |         |
+| AP19 |         |         |
+| AP20 |         |         |
+| AP21 |         |         |
+| AP22 |         |         |
+| AP23 |         |         |
+| AP24 |         |         |
+| AP25 |         |         |
+| AP26 |         |         |
+| AP27 |         |         |
+| AP28 |         |         |
+| AP29 |         |         |
+| AP30 |         |         |
+| AP31 |         |         |
+| AP32 |         |         |
+| AP33 |         |         |
+| AP34 |         |         |
+| AP35 |         |         |
+| AP36 |         |         |
+| AP37 |         |         |
+| AP38 |         |         |
+| AP39 |         |         |
+| AP40 |         |         |
+| AP41 |         |         |
+| AP42 |         |         |
+| AP43 |         |         |
+| AP44 |         |         |
+| AP45 |         |         |
+| AP46 |         |         |
+| AP47 |         |         |
+| AP48 |         |         |
+| AP49 |         |         |
+| AP50 |         |         |
+| AP51 |         |         |
+| AP52 |         |         |
+| AP53 |         |         |
+| AP54 |         |         |
 
 ---
 
-#### 2.1.4. Schematic Plans (ToDo)
+#### 2.1.4. Schematic Plans
 
-##### Outlets
+##### Outlets (ToDo)
 
 > This schematic shows an example layout for the outlets on the Level. The plan **is not** drawn to scale, as doing so
 > would make the diagram too difficult to read.
@@ -280,7 +323,7 @@
 
 ---
 
-#### 2.2.3. Access Points Calculations and Positions (ToDo)
+#### 2.2.3. Access Points Calculations and Positions
 
 > Access Points need to be calculated for each room, individually. <br>
 > For that, we can use an adaptation of the Pythagorean theorem, such as:
@@ -295,28 +338,146 @@
 
 ---
 
-##### APs needed per room (ToDo)
+##### APs needed per room
+
+**Diameter Squared of AP:** 2500
 
 | Room | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity | 
 |------|--------------|-------------|---------------------------|-------------|
-| 1    | 20.95        | 11.4        |                           |             | 
-| 2    | 26.7         | 11.4        |                           |             |
-| 3    | 19.05        | 11.4        |                           |             |
-| 4    | 19.05        | 11.4        |                           |             |
-| 5    | 38.1         | 13.3        |                           |             |
-| 6    | 34.3         | 13.3        |                           |             |
-| 7    | 36.2         | 13.3        |                           |             |
-| 8    |              |             |                           |             |
-| 9    | 13.3         | 19.05       |                           |             |
-| 10   | 26.7         | 15.2        |                           |             |
-| 11   | 13.3         | 19.05       |                           |             |
-| 12   | 13.3         | 19.05       |                           |             |
-| 13   | 13.3         | 19.05       |                           |             |
-| 14   | 13.3         | 13.3        |                           |             |
-| 15   |              |             |                           |             |
-| 16   |              |             |                           |             |
-| 17   |              |             |                           |             |
-| 18   |              |             |                           |             |
+| 1    | 20.95        | 11.4        | 568.86                    | 1           | 
+| 2    | 26.7         | 11.4        | 842.85                    | 1           |
+| 3    | 19.05        | 11.4        | 492.86                    | 1           |
+| 4    | 19.05        | 11.4        | 492.86                    | 1           |
+| 5    | 38.1         | 13.3        | 1628.5                    | 1           |
+| 6    | 34.3         | 13.3        | 1353.38                   | 1           |
+| 7    | 36.2         | 13.3        | 1487.33                   | 1           |
+| 8    | 7.17         | 13.3        | 228.3                     | 1           |
+| 9    | 13.3         | 19.05       | 539.79                    | 1           |
+| 10   | 26.7         | 15.2        | 943.93                    | 1           |
+| 11   | 13.3         | 19.05       | 539.79                    | 1           |
+| 12   | 13.3         | 19.05       | 539.79                    | 1           |
+| 13   | 13.3         | 19.05       | 539.79                    | 1           |
+| 14   | 13.3         | 13.3        | 353.78                    | 1           |
+| 15   | 26.7         | 18.04       | 1038.33                   | 1           |
+| 16   | 27.0         | 18.04       | 1054.44                   | 1           |
+| 17   | 10.0         | 10.0        | 200.00                    | 1           |
+| 18   | 9.35         | 10.0        | 187.42                    | 1           |
+
+---
+
+> Other than the predefined rooms, I've divided the remaining of the floor in three distinct spaces. <br>
+> **1.** Corridor right below room 14. <br>
+> **2.** Space above room 10. <br>
+> **3.** Space to the bottom left of room 10. <br>
+> **4.** Space right below and to bottom right of room 10. <br>
+> **5.** Remaining of the floor.
+>
+> All the above spaces (except for Space 5) are shown in the schematic
+> (labeled as "S$x$", where $x$ is the number of the space).
+>
+> NOTE: The spaces on the sides of room 10 won't be calculated as
+> their size will be covered by the APs of the spaces around.
+
+---
+
+| Space | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
+|-------|--------------|-------------|---------------------------|-------------|
+| 1     | 21.5         | 42.6        | 2277.01                   | 1           |
+| 2     | 23.9         | 83.0        | 7460.21                   | 2           |
+| 3     | 82.6         | 17.8        | 7139.60                   | 2           |
+| 4     | 122.0        | 63.3        | 18890.9                   | 8           |
+
+---
+
+> To calculate the amount of APs needed for spaces with more than one AP we will follow some rules. <br>
+> **1.** If some measurement is less than 90% of 50$m$ (around 45$m$) we can fill the room with only one line of APs.
+> Otherwise, we should add one extra line; <br>
+> **2.** To get the number of lines needed we can use the formula: $n = H \div diameter$; <br>
+> **3.** The first APs to be placed must be the ones that cover the corners; <br>
+
+**Extra Calculations for Space 2 AP Amount**
+
+* As the space length is less than 45$m$, only one line of APs will be needed.
+* Making $23.9 \div 2$ we get the distance the outside APs must have from the wall, which is 11.95$m$
+* With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+* $x = \sqrt{25^2 - 11.95^2} = 21.96m$
+* **Maximum distance between 2 APs:** $2 * x = 43.92m$
+* **Between First and Last APs of a line:** $39.08 \div 43.92 = 0.89$, which means no intermediate AP is needed.
+
+**Extra Calculations for Space 3 AP Amount**
+
+* As the space width is less than 45$m$, only one line of APs will be needed.
+* Making $17.8 \div 2$ we get the distance the outside lines must have from the wall, which is 8.9$m$
+* With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
+* $y = \sqrt{25^2 - 8.9^2} = 23.36m$
+* **Maximum distance between 2 APs:** $2 * y = 46.72m$
+* **Between First and Last APs of a line:** $35.88 \div 46.72 = 0.77$, which means no intermediate AP is needed.
+
+**Extra Calculations for Space 4 AP Amount**
+
+* As both measurements are greater than 45$m$, we will need more than one line of APs.
+* As the space width is 63.3$m$, and $63.3 \div 50 = 1.3$, we will need 2 lines of APs
+* Making $63.3 \div 4$ we get the distance the outside lines must have from the wall, which is 15.83$m$
+* With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall. <br>
+* $y = \sqrt{25^2 - 15.83^2} = 19.35m$
+* **Maximum distance between 2 APs:** $2 * y = 38.7m$
+* **Between First and Last APs of a line:** $83.3 \div 38.7 = 2.15$, which means that we need 2 more APs per line.
+
+> **Note:** As **Space 5** is not in a rectangular shape we can't apply the same logic.
+
+**Calculations for Space 5**
+
+> In order to make the calculation of Space 5 APs, we proceeded with its
+> division in multiple rectangular shaped subspaces
+> (shown in the schematic as "E$x$", with $x$ being the number given to the subspace).
+
+> **Note:** The space between Space 1 and the wall will not be considered as the AP in Space 1 covers it.
+
+---
+
+| Subspace | Length ($m$) | Width ($m$) | $Length^2 \times Width^2$ | AP Quantity |
+|----------|--------------|-------------|---------------------------|-------------|
+| 1        | 90.87        | 102.83      | 18831.4                   | 9           |
+| 2        | 20.87        | 60.43       | 4087.34                   | 2           |
+| 3        | 43.48        | 116.96      | 15570.2                   | 5           |
+| 4        | 26.52        | 181.74      | 33732.7                   | 5           |
+
+---
+
+**Extra Calculations for Subspaces that need more than one AP**
+
+* **E1** <br>
+    * As both measurements are greater than 45$m$, we will need more than one line of APs.
+    * As the subspace width is 102.83$m$, and $102.83 \div 50 = 2.1$, we will need 3 lines of APs
+    * If we make $102.83 \div 6$, we get the distance the outside lines must have from the wall, which is 17.14$m$
+    * With that, we can calculate the maximum $y$ distance the first and last APs should be placed from the wall.
+    * $y = \sqrt{25^2 - 17.14^2} = 18.2m$
+    * **Maximum distance between 2 APs:** $2 * y = 36.4m$
+    * **Between First and Last APs of a line:** $54.47 \div 36.4 = 1.5$, which means that we need 1 more APs per line.
+
+* **E2** <br>
+    * As the subspace length is 20.87$m$, only one line of APs will be needed.
+    * Making $20.87 \div 2$ we get the distance the outside APs must have from the wall, which is 10.44$m$
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 10.44^2} = 22.72m$
+    * **Maximum distance between 2 APs:** $2 * x = 45.44m$
+    * **Between First and Last APs of a line:** $14.99 \div 45.44 = 0.33$, which means no intermediate AP is needed.
+
+* **E3** <br>
+    * As the subspace length is 43.48$m$, only one line of APs will be needed.
+    * Making $43.48 \div 2$ we get the distance the outside APs must have from the wall, which is 21.74$m$
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 21.74^2} = 12.34m$
+    * **Maximum distance between 2 APs:** $2 * x = 24.68m$
+    * **Between First and Last APs of a line:** $92.28 \div 24.68 = 3.74$, which means that we need 3 more APs.
+
+* **E4** <br>
+    * As the subspace length is 26.52$m$, only one line of APs will be needed.
+    * Making $26.52 \div 2$ we get the distance the outside APs must have from the wall, which is 13.26$m$
+    * With that, we can calculate the maximum $x$ distance the first and last APs should be placed from the wall. <br>
+    * $x = \sqrt{25^2 - 13.26^2} = 21.19m$
+    * **Maximum distance between 2 APs:** $2 * x = 42.38m$
+    * **Between First and Last APs of a line:** $139.36 \div 42.38 = 3.29$, which means that we need 3 more APs.
 
 ---
 
@@ -324,28 +485,64 @@
 
 | AP   | X ($m$) | Y ($m$) |
 |------|---------|---------|
-| AP1  | 25      | 25      |
-| AP2  | 25      | 75      |
-| AP3  | 25      | 125     |
-| AP4  | 25      | 175     |
-| AP5  | 75      | 25      |
-| AP6  | 75      | 75      |
-| AP7  | 75      | 125     |
-| AP8  | 75      | 175     |
-| AP9  | 125     | 25      |
-| AP10 | 125     | 75      |
-| AP11 | 125     | 125     |
-| AP12 | 125     | 175     |
-| AP13 | 175     | 25      |
-| AP14 | 175     | 75      |
-| AP15 | 175     | 125     |
-| AP16 | 175     | 175     |
+| AP1  |         |         |
+| AP2  |         |         |
+| AP3  |         |         |
+| AP4  |         |         |
+| AP5  |         |         |
+| AP6  |         |         |
+| AP7  |         |         |
+| AP8  |         |         |
+| AP9  |         |         |
+| AP10 |         |         |
+| AP11 |         |         |
+| AP12 |         |         |
+| AP13 |         |         |
+| AP14 |         |         |
+| AP15 |         |         |
+| AP16 |         |         |
+| AP17 |         |         |
+| AP18 |         |         |
+| AP19 |         |         |
+| AP20 |         |         |
+| AP21 |         |         |
+| AP22 |         |         |
+| AP23 |         |         |
+| AP24 |         |         |
+| AP25 |         |         |
+| AP26 |         |         |
+| AP27 |         |         |
+| AP28 |         |         |
+| AP29 |         |         |
+| AP30 |         |         |
+| AP31 |         |         |
+| AP32 |         |         |
+| AP33 |         |         |
+| AP34 |         |         |
+| AP35 |         |         |
+| AP36 |         |         |
+| AP37 |         |         |
+| AP38 |         |         |
+| AP39 |         |         |
+| AP40 |         |         |
+| AP41 |         |         |
+| AP42 |         |         |
+| AP43 |         |         |
+| AP44 |         |         |
+| AP45 |         |         |
+| AP46 |         |         |
+| AP47 |         |         |
+| AP48 |         |         |
+| AP49 |         |         |
+| AP50 |         |         |
+| AP51 |         |         |
+| AP52 |         |         |
 
 ---
 
-#### 2.2.4. Schematic Plans (ToDo)
+#### 2.2.4. Schematic Plans 
 
-##### Outlets
+##### Outlets (ToDo)
 
 > This schematic shows an example layout for the outlets on the Level. The plan **is not** drawn to scale, as doing so
 > would make the diagram too difficult to read.
