@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rcomp-25-26-DI-G2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rcomp-25-26-DI-G2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241166/terminal2.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241166/terminal2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241234/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241234/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/planning.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/planning.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/review.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/review.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,15 +54,27 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivadu/OneDrive/Documents/GitHub/rcomp-25-26-DI-G2/doc/sprint2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/diogo/OneDrive/Documentos/GitHub/rcomp-25-26-DI-G2/doc/sprint1/1241229/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint1\1241229\assets" />
       <recent name="C:\Users\ivadu\OneDrive\Documents\GitHub\rcomp-25-26-DI-G2\doc\sprint2" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,6 +89,25 @@
       <workItem from="1772210313793" duration="1038000" />
       <workItem from="1772215535924" duration="3334000" />
       <workItem from="1772287066768" duration="182000" />
+      <workItem from="1772973260387" duration="771000" />
+      <workItem from="1773004087902" duration="139000" />
+      <workItem from="1773061044227" duration="96000" />
+      <workItem from="1773061229036" duration="2788000" />
+      <workItem from="1773064497422" duration="27000" />
+      <workItem from="1773064540262" duration="231000" />
+      <workItem from="1773073273368" duration="108000" />
+      <workItem from="1773073494237" duration="494000" />
+      <workItem from="1773074006545" duration="211000" />
+      <workItem from="1773237655832" duration="2896000" />
+      <workItem from="1773308563941" duration="739000" />
+      <workItem from="1773323276557" duration="554000" />
+      <workItem from="1773323851166" duration="225000" />
+      <workItem from="1773324195705" duration="400000" />
+      <workItem from="1773324743900" duration="414000" />
+      <workItem from="1773325179158" duration="3425000" />
+      <workItem from="1773345018411" duration="209000" />
+      <workItem from="1773360766169" duration="905000" />
+      <workItem from="1773402462334" duration="5967000" />
     </task>
     <servers />
   </component>
