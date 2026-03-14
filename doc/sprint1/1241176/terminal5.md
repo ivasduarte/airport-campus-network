@@ -273,6 +273,13 @@ there are no dead zones.*
 
 ---
 
+#### Schematic Plan (For APs and Dedicated Outlets)
+> This schematic shows how to place the APs and their Dedicated Outlets.
+
+![Access Points Schematic](doc/sprint1/1241176/assets/Terminal5_Level0-APs.svg)
+
+---
+
 ### 3.3. Hardware Summary
 
 * **Total APs on Level 0:**  107 APs
