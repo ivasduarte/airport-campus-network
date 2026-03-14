@@ -270,7 +270,11 @@
 >
 > Each Access Point covers a circle of 50$m$ diameter. <br>
 > All APs will be installed in the space above the dropped ceiling. <br>
-> Each AP will require **a dedicated outlet**.
+> Each AP will require **a dedicated outlet**. <br>
+> All APs on this terminal will operate on **5GHz band**, since this band offers a much larger number of available
+> channels,
+> and it also has **DFS (Dynamic Frequency Selection)**, which selects a channel in order avoid interference with its
+> neighbours.
 >
 > This schematic shows how to place the APs and their Dedicated Outlets. Because each level requires 16 APs in the exact
 > same positions, this schematic applies to all levels.
@@ -560,7 +564,11 @@
 >
 > Each Access Point covers a circle of 50$m$ diameter. <br>
 > All APs will be installed in the space above the dropped ceiling. <br>
-> Each AP will require **a dedicated outlet**.
+> Each AP will require **a dedicated outlet**. <br>
+> All APs on this terminal will operate on **5GHz band**, since this band offers a much larger number of available
+> channels,
+> and it also has **DFS (Dynamic Frequency Selection)**, which selects a channel in order avoid interference with its
+> neighbours.
 >
 > This schematic shows how to place the APs and their Dedicated Outlets. Because each level requires 16 APs in the exact
 > same positions, this schematic applies to all levels.
@@ -569,4 +577,100 @@
 
 ---
 
-## 4. MC, HC and CP (ToDo)
+## 4. Cross Connections (ToDo)
+
+> Cables connecting an MC to an IC are limited to 1500 meters long. <br>
+> Cables connecting an IC and an HC are limited to 500 meters long. <br>
+> Each enclosure has a size of 42$U$, this means it fits up to 200 cables. <br>
+> An enclosure must have 1$U$ of free space. <br>
+> All HCs will be placed on above the dropped ceiling. <br>
+> By each room there will be a CP, to facilitate cable distribution.
+
+---
+
+### 4.1. Positioning of HCs
+
+HCs will be positioned in places where they can serve the most rooms/open areas as possible.
+
+One of the HCs on **both floors** will be placed in the bottom right corner. <br>
+This will guarantee that one HC will be available for all external wall outlets,
+if a CP is placed at the middle of each wall, as well as the AP outlets around the HC.
+
+All other HCs needed will be placed in a way that their usage is maximized, while reducing cable length, if possible.
+
+---
+
+### 4.2. Level 1 - HCs & CPs positions & rooms/areas assigned
+
+At this level we will need to place both an MC and an IC. <br>
+As the room dimensions are 200$m$ x 200$m$, the highest distance between two points of the room will be its diagonal.
+This has a length of 282.84$m$, which means the IC can be placed in any of the hardware rooms available. <br>
+I've decided to place both in room 12, so it is close to a vertical passageway, and it makes it easier to make a
+connection between them.
+
+With this room dimensions we also know that a **singular HC** is necessary, if placed in the middle of the room.
+
+To be able to connect all cables we will need some CPs. For that we will make the following distribution:
+
+- **CP-L1-01** : Placed exactly in the middle of the right side external wall
+- **CP-L1-02** : Placed exactly in the middle of the bottom side external wall
+- **CP-L1-03** : This CP will be placed at the end of room 3, in order to server rooms 1, 2 and 3 and AP outlets around
+  it, if needed.
+- **CP-L1-04** : This CP will be placed between rooms 4 and 5, serving these exact rooms and AP outlets around it, if
+  needed.
+- **CP-L1-05** : This CP will be placed between rooms 7 and 8, serving these exact rooms and AP outlets around it, if
+  needed.
+
+All the CPs are less than 90 meters away from the HC, as well as the furthest outlet connecting to them.
+
+| CP       | X ($m$) | Y ($m$) | Rooms served | Outlets | APs | APs served                                | Total   |
+|----------|---------|---------|--------------|---------|-----|-------------------------------------------|---------|
+| CP-L1-01 | 200     | 100     | None.        | 40      | 8   | AP6, AP31-34, AP51-53                     | **48**  |
+| CP-L1-02 | 100     | 200     | None.        | 40      | 10  | AP11-12, AP24-27, AP39, APP44, AP49, AP54 | **50**  |
+| CP-L1-03 | 83.3    | 10.6    | R1, R2, R3   | 178     | 5   | AP1-3, AP14, AP17                         | **183** |
+| CP-L1-04 | 121.1   | 10.6    | R4, R5       | 146     | 7   | AP4-5, AP30, AP35, AP40, AP45, AP50       | **153** |
+| CP-L1-05 | 78.8    | 103.92  | R7, R8       | 184     | 12  | AP7-10, AP14-15, AP17-18, AP20-23         | **196** |
+
+All the remaining APs will be connected directly to the HC, as they are in its range.
+
+**Total: 1 HC + 5 CPs**
+
+--- 
+
+### 4.3. Level 4 - HCs & CPs positions and rooms/areas assigned (ToDo)
+
+At this level we will only need to place an IC. <br>
+As the room dimensions are 200$m$ x 200$m$, the highest distance between two points of the room will be its diagonal.
+This has a length of 282.84$m$, which means the IC can be placed in any of the hardware rooms available. <br>
+I've decided to place it in room 18, so it is close to a vertical passageway
+and directly above the room with the MC, so the connection is easier.
+
+With this room dimensions we also know that a **singular HC** is necessary, if placed in the middle of the room.
+
+To be able to connect all cables we will need some CPs. For that we will make the following distribution:
+
+- **CP-L1-01** : Placed exactly in the middle of the right side external wall
+- **CP-L1-02** : Placed exactly in the middle of the bottom side external wall
+- **CP-L1-03** : Placed at the right bottom corner of room 4.
+- **CP-L1-04** : Placed at the left bottom corner of room 6.
+- **CP-L1-05** : Placed at the right intersection of rooms 5 and 9.
+- **CP-L1-06** : Placed between rooms 12 and 13.
+- **CP-L1-07** : Placed at the right bottom corner of room 10.
+
+All the CPs are less than 90 meters away from the HC, as well as the furthest outlet connecting to them.
+
+| CP       | X ($m$) | Y ($m$) | Rooms served       | Outlets | APs | APs served                         | Total   |
+|----------|---------|---------|--------------------|---------|-----|------------------------------------|---------|
+| CP-L1-01 | 200     | 100     | None.              | 40      | 7   | AP30-31, AP48-52                   | **47**  |
+| CP-L1-02 | 100     | 200     | None.              | 40      | 8   | AP33, AP37, AP40-42, AP45-47       | **48**  |
+| CP-L1-03 | 85.75   | 11.4    | R1, R2, R3         | 197     | 3   | AP1-3                              | **200** |
+| CP-L1-04 | 77.67   | 13.3    | R6, R7             | 189     | 2   | AP6-7                              | **191** |
+| CP-L1-05 | 99.05   | 13.3    | R4, R5, R9         | 153     | 3   | AP4-5, AP9                         | **156** |
+| CP-L1-06 | 99.05   | 70.45   | R11, R12, R13, R14 | 189     | 11  | AP11-14, AP32-33, AP35-36, AP38-39 | **200** |
+| CP-L1-07 | 44.5    | 50.5    | R10                | 82      | 11  | AP10, AP20-29                      | **93**  |
+
+All the remaining APs will be connected directly to the HC, as they are in its range.
+
+**Total: 1 HC + 7 CPs**
+
+---
