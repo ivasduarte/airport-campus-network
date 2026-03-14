@@ -141,6 +141,8 @@ We will use the diagonal check for rooms and the density formula for open areas:
 
 | ROOMS  | $D_r = \sqrt{length^2 + width^2} $ (m) | $D_r \leq 50 meters$? | TOTAL APs |
 |:------:|:--------------------------------------:|:---------------------:|:---------:|
+| **1**  |    $\sqrt{12.5^2 + 12.5^2} = 17.68$    |          Yes          |     1     |
+| **2**  |    $\sqrt{12.5^2 + 12.5^2} = 17.68$    |          Yes          |     1     |
 | **3**  |    $\sqrt{39.3^2 + 14.3^2} = 41.82$    |          Yes          |     1     |
 | **4**  |    $\sqrt{22.2^2 + 14.3^2} = 26.41$    |          Yes          |     1     |
 | **5**  |    $\sqrt{22.3^2 + 14.3^2} = 26.50$    |          Yes          |     1     |
@@ -150,13 +152,53 @@ We will use the diagonal check for rooms and the density formula for open areas:
 | **9**  |    $\sqrt{22.2^2 + 14.3^2} = 26.41$    |          Yes          |     1     |
 | **10** |    $\sqrt{14.3^2 + 30.5^2} = 33.68$    |          Yes          |     1     |
 | **11** |    $\sqrt{12.5^2 + 30.5^2} = 32.96$    |          Yes          |     1     |
+| **12** |    $\sqrt{12.5^2 + 30.5^2} = 30.96$    |          Yes          |     1     |
+| **13** |    $\sqrt{12.5^2 + 30.5^2} = 30.96$    |          Yes          |     1     |
 | **14** |    $\sqrt{14.3^2 + 28.6^2} = 31.98$    |          Yes          |     1     |
 | **15** |    $\sqrt{25.0^2 + 16.1^2} = 29.73$    |          Yes          |     1     |
+| **16** |    $\sqrt{28.6^2 + 14.3^2} = 31.98$    |          Yes          |     1     |
+| **17** |    $\sqrt{25.0^2 + 14.3^2} = 28.80$    |          Yes          |     1     |
+| **18** |    $\sqrt{12.5^2 + 11.6^2} = 17.05$    |          Yes          |     1     |
 | **19** |    $\sqrt{33.9^2 + 14.3^2} = 36.79$    |          Yes          |     1     |
 | **20** |    $\sqrt{40.2^2 + 14.3^2} = 42.66$    |          Yes          |     1     |
 | **21** |    $\sqrt{28.6^2 + 14.3^2} = 31.98$    |          Yes          |     1     |
+| **22** |    $\sqrt{12.5^2 + 11.6^2} = 17.05$    |          Yes          |     1     |
 
-**Total APs for Level 0 rooms: 14 Aps (Considering only rooms with standard outlets).**
+**Total APs for Level 0 rooms: 22 APs (Considering only rooms with standard outlets).**
+
+#### 3.1.2. Level 0 Open Areas
+
+Due to the large size of the T5 ($400m$ long), we will divide the open area into zones for greater accuracy.
+
+| ZONE  | DIMENSIONS ($cm$) | DIMENSIONS ($m$) |    $n_{lines} = \lceil H/(2R) \rceil$     |     $y_i = H(2i - 1)/(2n_{lines})$     |    $d = min(y_i, H - y_i)$    |      $c = \sqrt{R² - d²}$       | $D_r$  |        $n_{APs} = \lceil (L-2c)/(2c) \rceil + 2 $        | TOTAL APs |
+|:-----:|:-----------------:|:----------------:|:-----------------------------------------:|:--------------------------------------:|:-----------------------------:|:-------------------------------:|:------:|:--------------------------------------------------------:|:---------:|
+| **A** |     1.5 x 0.8     |  26.19 x 14.29   | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | 29.83  | $\lceil \frac{26.19 - 47.92}{47.92} \rceil \!+\! 2 = 2$  |   **1**   |
+| **B** |     5.7 x 0.8     |  101.79 x 14.29  | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | 102.79 | $\lceil \frac{101.79 - 47.92}{47.92} \rceil \!+\! 2 = 3$ |   **3**   |
+| **C** |     6.4 x 9.0     | 114.29 x 160.71  | $n_{lines} = \lceil 160.71/50 \rceil = 4$ | $\lceil (160.71(1))/8 \rceil = 20.09$  | $\min(20.09, 140.62) = 20.09$ | $\sqrt{25^2 - 20.09^2} = 14.88$ | 197.21 | $\lceil \frac{114.29 - 29.76}{29.76} \rceil \!+\! 2 = 5$ |  **20**   |
+| **D** |    1.4 x 19.3     |  25.00 x 344.64  | $n_{lines} = \lceil 344.64/50 \rceil = 7$ | $\lceil (344.64(1))/14 \rceil = 24.62$ | $\min(24.62, 320.02) = 24.62$ | $\sqrt{25^2 - 24.62^2} = 4.34$  | 345.55 |  $\lceil \frac{25.00 - 8.68}{8.68} \rceil \!+\! 2 = 4$   |  **28**   |
+| **E** |     0.5 x 1.7     |   8.93 x 30.36   | $n_{lines} = \lceil 30.36/50 \rceil = 1$  |  $\lceil (30.36(1))/2 \rceil = 15.18$  | $\min(15.18, 15.18) = 15.18$  | $\sqrt{25^2 - 15.18^2} = 19.87$ | 31.65  |  $\lceil \frac{8.93 - 39.74}{39.74} \rceil \!+\! 2 = 1$  |   **1**   |
+| **F** |     1.8 x 1.4     |  32.14 x 25.00   |   $n_{lines} = \lceil 25/50 \rceil = 1$   |   $\lceil (25(1))/2 \rceil = 12.50$    | $\min(12.50, 12.50) = 12.50$  | $\sqrt{25^2 - 12.50^2} = 21.65$ | 25.63  | $\lceil \frac{32.14 - 43.30}{43.30} \rceil \!+\! 2 = 2$  |   **1**   |
+| **G** |     5.4 x 4.6     |  96.43 x 82.14   | $n_{lines} = \lceil 82.14/50 \rceil = 2$  |  $\lceil (82.14(1))/4 \rceil = 20.54$  | $\min(20.54, 61.60) = 20.54$  | $\sqrt{25^2 - 20.54^2} = 14.25$ | 126.67 | $\lceil \frac{96.43 - 28.50}{28.50} \rceil \!+\! 2 = 5$  |  **10**   |
+| **H** |     2.2 x 3.3     |  39.29 x 58.93   | $n_{lines} = \lceil 58.93/50 \rceil = 2$  |  $\lceil (58.93(1))/4 \rceil = 14.73$  |  $\min(14.73, 44.2) = 14.73$  | $\sqrt{25^2 - 14.73^2} = 20.20$ | 70.83  | $\lceil \frac{39.29 - 40.40}{40.40} \rceil \!+\! 2 = 2$  |   **2**   |
+| **I** |     1.9 x 0.9     |  33.93 x 16.07   | $n_{lines} = \lceil 16.07/50 \rceil = 1$  |  $\lceil (16.07(1))/2 \rceil = 8.04$   |   $\min(8.04, 8.03) = 8.04$   | $\sqrt{25^2 - 8.04^2} = 23.67$  | 37.54  | $\lceil \frac{33.93 - 47.34}{47.34} \rceil \!+\! 2 = 2$  |   **1**   |
+| **J** |     1.6 x 2.6     |  28.57 x 46.43   | $n_{lines} = \lceil 46.43/50 \rceil = 1$  |  $\lceil (46.43(1))/2 \rceil = 23.22$  | $\min(23.22, 23.21) = 23.22$  | $\sqrt{25^2 - 23.22^2} = 9.27$  | 54.52  | $\lceil \frac{28.57 - 18.54}{18.54} \rceil \!+\! 2 = 3$  |   **3**   |
+| **K** |     2.3 x 3.3     |  41.07 x 58.93   | $n_{lines} = \lceil 58.93/50 \rceil = 2$  |  $\lceil (58.93(1))/4 \rceil = 14.73$  |  $\min(14.73, 44.2) = 14.73$  | $\sqrt{25^2 - 14.73^2} = 20.20$ | 71.83  | $\lceil \frac{41.07 - 40.40}{40.40} \rceil \!+\! 2 = 2$  |   **2**   |
+| **L** |     7.1 x 4.5     |  126.79 x 80.36  | $n_{lines} = \lceil 80.36/50 \rceil = 2$  |  $\lceil (80.36(1))/4 \rceil = 20.09$  | $\min(20.09, 60.27) = 20.09$  | $\sqrt{25^2 - 20.09^2} = 14.88$ | 150.11 | $\lceil \frac{126.79 - 29.76}{29.76} \rceil \!+\! 2 = 6$ |  **12**   |
+| **M** |     1.6 x 0.8     |  28.57 x 14.29   | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | 31.94  | $\lceil \frac{28.57 - 47.92}{47.92} \rceil \!+\! 2 = 2$  |   **1**   |
+
+
+**Estimated Total for Open Areas of Level 0: 85 APs**
+
+*\*Note: All AP installations must be done in the false ceiling space (4 meters high), using the **5 GHz** band to maximize
+interference.*
+
+---
+
+#### Summary of APs in Level 0
+
+* APs in rooms: **22**
+* APs in open areas: **85**
+* **TOTAL: 107 Access Points**
 
 ---
 
@@ -164,6 +206,8 @@ We will use the diagonal check for rooms and the density formula for open areas:
 
 | ROOMS  | $D_r = \sqrt{length^2 + width^2} $ (m) | $D_r \leq 50 meters$? | TOTAL APs |
 |:------:|:--------------------------------------:|:---------------------:|:---------:|
+| **1**  |    $\sqrt{12.5^2 + 12.5^2} = 17.68$    |          Yes          |     1     |
+| **2**  |    $\sqrt{12.5^2 + 12.5^2} = 17.68$    |          Yes          |     1     |
 | **3**  |   $\sqrt{17.86^2 + 14.29^2} = 22.87$   |          Yes          |     1     |
 | **4**  |   $\sqrt{17.86^2 + 14.29^2} = 22.87$   |          Yes          |     1     |
 | **5**  |   $\sqrt{22.32^2 + 14.29^2} = 26.50$   |          Yes          |     1     |
@@ -179,8 +223,14 @@ We will use the diagonal check for rooms and the density formula for open areas:
 | **15** |   $\sqrt{37.50^2 + 14.29^2} = 40.13$   |          Yes          |     1     |
 | **16** |   $\sqrt{14.29^2 + 29.50^2} = 32.78$   |          Yes          |     1     |
 | **17** |   $\sqrt{25.00^2 + 16.10^2} = 29.74$   |          Yes          |     1     |
+| **18** |   $\sqrt{28.6^2 + 14.29^2} = 29.74$    |          Yes          |     1     |
+| **19** |   $\sqrt{14.29^2 + 25.00^2} = 28.8$    |          Yes          |     1     |
+| **20** |   $\sqrt{14.29^2 + 30.4^2} = 33.59$    |          Yes          |     1     |
+| **21** |   $\sqrt{14.29^2 + 30.4^2} = 33.59$    |          Yes          |     1     |
+| **22** |   $\sqrt{14.29^2 + 11.60^2} = 18.41$   |          Yes          |     1     |
 | **23** |   $\sqrt{33.90^2 + 14.29^2} = 36.79$   |          Yes          |     1     |
 | **24** |   $\sqrt{39.30^2 + 14.29^2} = 41.82$   |          Yes          |     1     |
 | **25** |   $\sqrt{14.29^2 + 28.60^2} = 31.97$   |          Yes          |     1     |
+| **26** |   $\sqrt{14.29^2 + 14.29^2} = 20.21$   |          Yes          |     1     |
 
-**Total APs for Level 2 rooms: 18 APs (Considering only rooms with standard outlets).**
+**Total APs for Level 2 rooms: 26 APs (Considering only rooms with standard outlets).**
