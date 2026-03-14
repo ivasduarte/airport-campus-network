@@ -7,6 +7,6 @@
 - Iva Silva, 1241176
 
 ## Sprints
-- Sprint 1
+- [Sprint 1](doc/sprint1)
 - Sprint 2
 - Sprint 3
