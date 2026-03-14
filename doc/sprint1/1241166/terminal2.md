@@ -254,14 +254,14 @@
 
 #### 2.1.4. Schematic Plans
 
-##### Outlets (ToDo)
+##### Outlets
 
 > This schematic shows an example layout for the outlets on the Level. The plan **is not** drawn to scale, as doing so
 > would make the diagram too difficult to read.
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
 
-![Network Outlets Deployment Schematic Plan Level 1](assets/EsquemaOutletsLevel1.jpg) (ToDo) <br>
+![Network Outlets Deployment Schematic Plan Level 1](assets/EsquemaOutletsLevel1.jpg) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
 
 ##### Access Points
@@ -542,14 +542,14 @@
 
 #### 2.2.4. Schematic Plans
 
-##### Outlets (ToDo)
+##### Outlets
 
 > This schematic shows an example layout for the outlets on the Level. The plan **is not** drawn to scale, as doing so
 > would make the diagram too difficult to read.
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
 
-![Network Outlets Deployment Schematic Plan Level 4](assets/EsquemaOutletsLevel4.jpg) (ToDo) <br>
+![Network Outlets Deployment Schematic Plan Level 4](assets/EsquemaOutletsLevel4.jpg) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
 
 ---

@@ -20,7 +20,7 @@
 
 > Rooms **with** standard outlets : 1, 2, 3, 5, 6, 7, 12, 13, 14, 15, 16
 > 
-> Rooms **without** outlets : 4 (HC), 8, 9, 10, 11
+> Rooms **without** outlets : 4 (IC), 8, 9, 10, 11
 
 ---
 
@@ -68,7 +68,7 @@
 
 > Rooms **with** standard outlets: 1, 2, 4, 5, 7, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
 > 
-> Rooms **without** outlets: 3 (HC — network infrastructure), 6, 8, 10, 11
+> Rooms **without** outlets: 3, 6, 8, 10, 11
 
 ---
 
@@ -208,6 +208,8 @@ I divided the open areas on this terminal in 6 zones (as it will be shown on the
 > **Formulas:** $R=25m$, $n_{lines} = \lceil W/(2R) \rceil$, $y_i = W(2i-1)/(2n)$, $d = \min(y_i, W-y_i)$, $c = \sqrt{R^2-d^2}$, $n_{APs} = \lfloor (L-2c)/(2c) \rfloor + 2$, spacing $= (L-2c)/(n_{APs}-1)$
 >
 > W - Width; L - Length; R - AP radius (25m); i - line index (1 to $n_{lines}$)
+> 
+> These coordinates are local to the zone itself, for future calculations, it will be used global coordinates
 
 **Zone B** — $n_{lines}=2$, $d=22.41m$, $c=11.08m$
 
@@ -367,6 +369,8 @@ I divided the open areas on this terminal in 6 zones (as it will be shown on the
 >Cables connecting an MC to an IC are limited to 1500 meters long
 > 
 >Each enclosure has a size of 42U, which means, it fits 200 connections (1U must be free)
+>
+>There needs to be one IC per level
 > 
 >All HCs will be placed on the dropped ceiling 
 
@@ -390,11 +394,12 @@ The **X** coordinate of an HC will be chosen based on the rooms they will serve,
 
 ### 4.2. Level 0 - HCs positions and rooms/areas assigned
 
-The IC will be placed within the Room 4, in this case, I considered X = 124 & Y = 3, since it makes the IC being close to the vertical passageway
+The IC will be placed within the Room 4, in this case, I considered X = 118 & Y = 3, since it makes the IC stand close to the vertical passageway
+The MC will be placed next to this IC.
 
 | HC      | X ($m$) | Y ($m$) | Rooms served                     | Outlets | APs | APs served                 | Total   |
 |---------|---------|---------|----------------------------------|---------|-----|----------------------------|---------|
-| HC-L0-1 | 28      | 41      | R1, R8, R9, R10, R11a, R11b, R12 | 152     | 13  | 7 room APs + zones B, D    | **165** |
+| HC-L0-1 | 37      | 41      | R1, R8, R9, R10, R11a, R11b, R12 | 152     | 13  | 7 room APs + zones B, D    | **165** |
 | HC-L0-2 | 62      | 41      | R2, R3                           | 140     | 4   | 2 room APs + zones C, F    | **144** |
 | HC-L0-3 | 83      | 41      | R4, R13, R14                     | 148     | 7   | 3 room APs + zones A, C, F | **155** |
 | HC-L0-4 | 136     | 41      | R5, R6, R15                      | 184     | 7   | 3 room APs + zones C, E, F | **191** |
@@ -412,19 +417,19 @@ All distances will be measured on a straight-line from HC to the room center or 
 
 | Connection | Coordinates    | Distance |
 |------------|----------------|----------|
-| R1         | (16.38, 6.04)  | 36.8$m$  |
-| R8         | (6.04, 18.11)  | 31.7$m$  |
-| R9         | (6.04, 29.31)  | 24.9$m$  |
-| R10        | (6.89, 68.11)  | 34.4$m$  |
-| R11a       | (19.82, 62.94) | 23.4$m$  |
-| R11b       | (20.68, 74.14) | 33.9$m$  |
-| R12        | (40.52, 75.86) | 37$m$    |
-| B-AP1      | (11.08, 32.41) | 19$m$    |
-| B-AP2      | (16.51, 32.41) | 14.3$m$  |
-| B-AP3      | (11.08, 77.25) | 40$m$    |
-| B-AP4      | (16.51, 77.25) | 38.0$m$  |
-| D-AP1      | (11.08, 56.89) | 23.2$m$  |
-| D-AP2      | (16.51, 56.89) | 19.6$m$  |
+| R1         | (16.38, 6.04)  | 40.5$m$  |
+| R8         | (6.04, 18.11)  | 38.6$m$  |
+| R9         | (6.04, 29.31)  | 33.1$m$  |
+| R10        | (6.89, 68.11)  | 40.5$m$  |
+| R11a       | (19.82, 62.94) | 27.8$m$  |
+| R11b       | (20.68, 74.14) | 36.9$m$  |
+| R12        | (40.52, 75.86) | 35$m$    |
+| B-AP1      | (11.08, 32.41) | 27.3$m$  |
+| B-AP2      | (16.51, 32.41) | 22.2$m$  |
+| B-AP3      | (11.08, 77.25) | 44.4$m$  |
+| B-AP4      | (16.51, 77.25) | 41.6$m$  |
+| D-AP1      | (11.08, 56.89) | 30.4$m$  |
+| D-AP2      | (16.51, 56.89) | 25.9$m$  |
 
 **HC-L0-2**
 
@@ -469,9 +474,9 @@ All distances will be measured on a straight-line from HC to the room center or 
 
 ---
 #### Schematic Plan (Cross Connections)
->This schematic shows how to place HCs and IC on Level 0
+>This schematic shows how to place MC, IC and HCs on Level 0
 >
-> **Green** represents a HC and **Blue** the IC
+> **Red** represents the MC, **Blue** the IC and **Green** a HC
 
 ![Cross Connections Schematic](assets/HCsLevel0.png)
 
@@ -480,9 +485,11 @@ All distances will be measured on a straight-line from HC to the room center or 
 
 ### 4.3. Level 2 - HCs positions and rooms/areas assigned
 
+The IC will be placed within the Room 3, in this case, I considered X = 118 & Y = 3, since it makes the IC stand close to the vertical passageway
+
 | HC      | X ($m$) | Y ($m$) | Rooms served                          | Outlets | APs | APs served                    | Outlets (External Walls) | Total   |
 |---------|---------|---------|---------------------------------------|---------|-----|-------------------------------|--------------------------|---------|
-| HC-L2-1 | 28      | 20      | R1, R6, R8, R10, R11a, R11b, R12, R17 | 190     | 8   | 8 room APs                    | 0                        | **198** |
+| HC-L2-1 | 30      | 20      | R1, R6, R8, R10, R11a, R11b, R12, R17 | 190     | 8   | 8 room APs                    | 0                        | **198** |
 | HC-L2-2 | 55      | 57      | R2, R13, R18                          | 162     | 7   | 3 room APs + zone E           | 19                       | **188** |
 | HC-L2-3 | 91      | 41      | R3, R14, R19                          | 112     | 7   | 3 room APs + zones A, B, E    | 2                        | **121** |
 | HC-L2-4 | 122     | 41      | R4, R15, R16, R20                     | 182     | 7   | 4 room APs + zones B, E       | 9                        | **198** |
@@ -499,83 +506,201 @@ All distances will be measured on a straight-line from HC to the room center or 
 
 | Connection | Coordinates    | Distance |
 |------------|----------------|----------|
-| R1         | (16.38, 6.04)  | 18.2$m$  |
-| R6         | (12.93, 17.24) | 15.3$m$  |
-| R8         | (12.93, 27.58) | 16.9$m$  |
-| R10        | (6.89, 66.38)  | 51$m$    |
-| R11a       | (19.82, 60.34) | 41.2$m$  |
-| R11b       | (20.68, 71.55) | 52.1$m$  |
-| R12        | (40.52, 52.59) | 34.9$m$  |
-| R17        | (40.52, 62.94) | 44.7$m$  |
+| R1         | (16.38, 6.04)  | 19.5$m$  |
+| R6         | (12.93, 17.24) | 17.3$m$  |
+| R8         | (12.93, 27.58) | 18.7$m$  |
+| R10        | (6.89, 66.38)  | 51.8$m$  |
+| R11a       | (19.82, 60.34) | 41.6$m$  |
+| R11b       | (20.68, 71.55) | 52.4$m$  |
+| R12        | (40.52, 52.59) | 34.2$m$  |
+| R17        | (40.52, 62.94) | 44.2$m$  |
 
 **HC-L2-2** 
 
-| Connection          | Coordinates              | Distance |
-|---------------------|--------------------------|----------|
-| R2                  | (48.27, 6.04)            | 51.4$m$  |
-| R13                 | (62.07, 52.59)           | 8.3$m$   |
-| R18                 | (68.97, 62.94)           | 15.2$m$  |
-| E-AP1               | (11.08, 91.38)           | 55.8$m$  |
-| E-AP2               | (32.79, 91.38)           | 40.9$m$  |
-| E-AP3               | (54.50, 91.38)           | 34.4$m$  |
-| E-AP4               | (76.21, 91.38)           | 40.4$m$  |
-| External Walls (19) | Max distance at (5, 100) | 65.9$m$  |
+| Connection          | Coordinates                                           | Distance |
+|---------------------|-------------------------------------------------------|----------|
+| R2                  | (48.27, 6.04)                                         | 51.4$m$  |
+| R13                 | (62.07, 52.59)                                        | 8.3$m$   |
+| R18                 | (68.97, 62.94)                                        | 15.2$m$  |
+| E-AP1               | (11.08, 91.38)                                        | 55.8$m$  |
+| E-AP2               | (32.79, 91.38)                                        | 40.9$m$  |
+| E-AP3               | (54.50, 91.38)                                        | 34.4$m$  |
+| E-AP4               | (76.21, 91.38)                                        | 40.4$m$  |
+| External Walls (19) | Max distance at (5, 100) using Pathway at (0.9, 99.4) | 78.4$m$  |
 
 **HC-L2-3**
 
-| Connection         | Coordinates                | Distance |
-|--------------------|----------------------------|----------|
-| R3                 | (108.62, 6.04)             | 39.1$m$  |
-| R14                | (86.20, 52.59)             | 12.5$m$  |
-| R19                | (100, 62.94)               | 23.7$m$  |
-| A-AP1              | (88.05, 6.04)              | 35.1$m$  |
-| A-AP2              | (92.98, 6.04)              | 35$m$    |
-| B-AP1              | (85.19, 25)                | 17$m$    |
-| E-AP5              | (97.93, 91.38)             | 50.9$m$  |
-| External Walls (2) | Max distance at (100, 100) | 59.7$m$  |
+| Connection         | Coordinates                                               | Distance |
+|--------------------|-----------------------------------------------------------|----------|
+| R3                 | (108.62, 6.04)                                            | 39.1$m$  |
+| R14                | (86.20, 52.59)                                            | 12.5$m$  |
+| R19                | (100, 62.94)                                              | 23.7$m$  |
+| A-AP1              | (88.05, 6.04)                                             | 35.1$m$  |
+| A-AP2              | (92.98, 6.04)                                             | 35$m$    |
+| B-AP1              | (85.19, 25)                                               | 17$m$    |
+| E-AP5              | (97.93, 91.38)                                            | 50.9$m$  |
+| External Walls (2) | Max distance at (100, 100) using Pathway at (101.1, 99.4) | 63.8$m$  |
 
 **HC-L2-4** 
 
-| Connection         | Coordinates                | Distance |
-|--------------------|----------------------------|----------|
-| R4                 | (124.14, 6.04)             | 35$m$    |
-| R15                | (106.89, 52.59)            | 19$m$    |
-| R16                | (128.44, 52.59)            | 13.3$m$  |
-| R20                | (126.72, 62.94)            | 22.4$m$  |
-| B-AP2              | (126.72, 25)               | 16.7$m$  |
-| E-AP6              | (119.64, 91.38)            | 50.4$m$  |
-| E-AP7              | (141.35, 91.38)            | 54$m$    |
-| External Walls (9) | Max distance at (145, 100) | 63.3$m$  |
+| Connection         | Coordinates                                               | Distance |
+|--------------------|-----------------------------------------------------------|----------|
+| R4                 | (124.14, 6.04)                                            | 35$m$    |
+| R15                | (106.89, 52.59)                                           | 19$m$    |
+| R16                | (128.44, 52.59)                                           | 13.3$m$  |
+| R20                | (126.72, 62.94)                                           | 22.4$m$  |
+| B-AP2              | (126.72, 25)                                              | 16.7$m$  |
+| E-AP6              | (119.64, 91.38)                                           | 50.4$m$  |
+| E-AP7              | (141.35, 91.38)                                           | 54$m$    |
+| External Walls (9) | Max distance at (145, 100) using Pathway at (151.5, 99.4) | 77.5$m$  |
 
 **HC-L2-5**
 
-| Connection        | Coordinates     | Distance |
-|-------------------|-----------------|----------|
-| R5                | (161.20, 6.04)  | 29$m$    |
-| R21               | (166.38, 59.48) | 25.1$m$  |
-| B-AP3             | (168.25, 25)    | 12.4$m$  |
-| External Wall (1) | (155, 100)      | 65.3$m$  |
+| Connection        | Coordinates                               | Distance |
+|-------------------|-------------------------------------------|----------|
+| R5                | (161.20, 6.04)                            | 29$m$    |
+| R21               | (166.38, 59.48)                           | 25.1$m$  |
+| B-AP3             | (168.25, 25)                              | 12.4$m$  |
+| External Wall (1) | (155, 100) using Pathway at (151.5, 99.4) | 69.2$m$  |
 
 **HC-L2-6** 
 
-| Connection          | Coordinates                | Distance |
-|---------------------|----------------------------|----------|
-| R7                  | (178.44, 20.69)            | 20.8$m$  |
-| R9                  | (178.44, 43.10)            | 5$m$     |
-| C-AP1               | (195.69, 16.38)            | 27.7$m$  |
-| D-AP1               | (175, 44.82)               | 8.9$m$   |
-| E-AP8               | (163.06, 91.38)            | 54.2$m$  |
-| F-AP1               | (204.30, 16.95)            | 32.1$m$  |
-| F-AP2               | (204.30, 50.86)            | 23.5$m$  |
-| F-AP3               | (204.30, 84.77)            | 48.7$m$  |
-| External Walls (28) | Max distance at (200, 100) | 61.4$m$  |
+| Connection          | Coordinates                                               | Distance |
+|---------------------|-----------------------------------------------------------|----------|
+| R7                  | (178.44, 20.69)                                           | 20.8$m$  |
+| R9                  | (178.44, 43.10)                                           | 5$m$     |
+| C-AP1               | (195.69, 16.38)                                           | 27.7$m$  |
+| D-AP1               | (175, 44.82)                                              | 8.9$m$   |
+| E-AP8               | (163.06, 91.38)                                           | 54.2$m$  |
+| F-AP1               | (204.30, 16.95)                                           | 32.1$m$  |
+| F-AP2               | (204.30, 50.86)                                           | 23.5$m$  |
+| F-AP3               | (204.30, 84.77)                                           | 48.7$m$  |
+| External Walls (28) | Max distance at (160, 100) using Pathway at (151.5, 99.4) | 75.5$m$  |
 
 ---
 #### Schematic Plan (Cross Connections)
 >This schematic shows how to place HCs and IC on Level 2
 >
-> **Green** represents a HC 
+> **Blue** represents the IC and **Green** a HC
 
 ![Cross Connections Schematic](assets/HCsLevel2.png)
 
 ---
+
+## 5. Cable Pathways
+
+> The cable length is calculated by using the straight line between the HC and the room/area it serves.
+> 
+> **MC → IC:** The MC will connect to the IC on both levels.
+> 
+> **IC → HC:** The IC will connect to all HCs on their specific level, using the dropped ceiling.
+> 
+> **Room outlets:** $d_{HC \to room\_center} \times N_{outlets}$ — in order to simply calculations
+>
+> **APs (room or open area):** $d_{HC \to AP\_position}$ - since each AP has a dedicated outlet
+> 
+> **External wall outlets (Level 2):** cables run from the HC horizontally through the dropped ceiling, until the nearest underfloor raceway access point on the external wall, then along the underfloor cable pathway to the outlet position. Cable length = $d_{HC \to access\ point} + d_{raceway\ to\ outlet}$
+> 
+> **Cable Redundancy** will be considered to connect **MC → IC** and **IC → HC** 
+
+---
+
+### 5.1. MC → IC (Backbone)
+
+The MC and the IC on Level 0 will be co-located, since both will be on Room 4. We will consider 1$m$ of cable for this connection.
+To connect the MC to the IC on Level 2, we will need to use the vertical passageway to go up 9$m$.
+
+**Total cable length for MC → IC connections: 10$m$**
+
+**Total cable length for MC → IC connections (with cable redundancy): 20$m$**
+
+---
+
+### 5.2. IC → HC 
+
+Since there are 2 ICs, one on each floor, we only need 
+
+| Connection    | Distance |
+|---------------|----------|
+| IC0 → HC-L0-1 | 89.5$m$  |
+| IC0 → HC-L0-2 | 67.7$m$  |
+| IC0 → HC-L0-3 | 51.7$m$  |
+| IC0 → HC-L0-4 | 42.1$m$  |
+| IC0 → HC-L0-5 | 68.5$m$  |
+| IC2 → HC-L2-1 | 89.6$m$  |
+| IC2 → HC-L2-2 | 82.9$m$  |
+| IC2 → HC-L2-3 | 46.5$m$  |
+| IC2 → HC-L2-4 | 38.2$m$  |
+| IC2 → HC-L2-5 | 53.6$m$  |
+| IC2 → HC-L2-6 | 75.3$m$  |
+
+**Total cable length for IC → HC connections : 705,6$m$**
+
+**Total cable length for IC → HC connections (with cable redundancy) : 1411,2$m$**
+
+---
+
+### 5.3 HCs → Outlets (Level 0)
+
+| HC                | Type                                                     | Cables  | Total Cable length |
+|-------------------|----------------------------------------------------------|---------|--------------------|
+| HC-L0-1           | Room outlets (R1: 40.5m×80, R12: 35.0m×72)               | 152     | 5760$m$            |
+| HC-L0-1           | APs — 13 cables                                          | 13      | 445$m$             |
+| **HC-L0-1 Total** | -                                                        | **165** | **6213$m$**        |
+| HC-L0-2           | Room outlets (R2: 37.6m×76, R3: 37.9m×64)                | 140     | 5282$m$            |
+| HC-L0-2           | APs — 4 cables                                           | 4       | 140$m$             |
+| **HC-L0-2 Total** | -                                                        | **144** | **5422$m$**        |
+| HC-L0-3           | Room outlets (R13: 39.4m×62, R14: 35.9m×86)              | 148     | 5526$m$            |
+| HC-L0-3           | APs — 7 cables                                           | 7       | 248$m$             |
+| **HC-L0-3 Total** | -                                                        | **155** | **5774$m$**        |
+| HC-L0-4           | Room outlets (R5: 36.9m×50, R6: 37.3m×72, R15: 39.2m×62) | 184     | 6964$m$            |
+| HC-L0-4           | APs — 7 cables                                           | 7       | 226$m$             |
+| **HC-L0-4 Total** | -                                                        | **191** | **7190$m$**        |
+| HC-L0-5           | Room outlets (R7: 35.0m×64, R16: 34.9m×62)               | 126     | 4401$m$            |
+| HC-L0-5           | APs — 3 cables                                           | 3       | 106$m$             |
+| **HC-L0-5 Total** | -                                                        | **129** | **4508$m$**        |
+| **Level 0 Total** | -                                                        | **784** | **29107$m$**       |
+
+---
+
+### 5.4. HCs → Outlets — Level 2
+
+| HC                | Type                                                                             | Cables  | Total Cable length |
+|-------------------|----------------------------------------------------------------------------------|---------|--------------------|
+| HC-L2-1           | Room outlets (R1: 19.5$m$×80, R12: 34.2$m$×46, R17: 44.2$m$×64)                  | 190     | 5962$m$            |
+| HC-L2-1           | APs — 8 cables                                                                   | 8       | 280$m$             |
+| **HC-L2-1 Total** | -                                                                                | **198** | **6242$m$**        |
+| HC-L2-2           | Room outlets (R2: 51.4$m$×76, R13: 8.3$m$×30, R18: 15.2$m$×56)                   | 162     | 5007$m$            |
+| HC-L2-2           | APs — 7 cables                                                                   | 7       | 246$m$             |
+| HC-L2-2           | External wall outlets — 19 cables (Max: 78$m$)                                   | 19      | 1490$m$            |
+| **HC-L2-2 Total** | -                                                                                | **188** | **6743$m$**        |
+| HC-L2-3           | Room outlets (R14: 12.5$m$×36, R19: 23.74$m$×76)                                 | 112     | 2254$m$            |
+| HC-L2-3           | APs — 7 cables                                                                   | 7       | 213$m$             |
+| HC-L2-3           | External wall outlets — 2 cables (Max: 64$m$)                                    | 2       | 128$m$             |
+| **HC-L2-3 Total** | -                                                                                | **121** | **2595$m$**        |
+| HC-L2-4           | Room outlets (R4: 35.0$m$×50, R15: 19.0$m$×36, R16: 13.3$m$×40, R20: 22.4$m$×56) | 182     | 4224$m$            |
+| HC-L2-4           | APs — 7 cables                                                                   | 7       | 211$m$             |
+| HC-L2-4           | External wall outlets — 9 cables (Max: 78$m$)                                    | 9       | 698$m$             |
+| **HC-L2-4 Total** | -                                                                                | **198** | **5133$m$**        |
+| HC-L2-5           | Room outlets (R5: 29.0$m$×64, R21: 25.1$m$×56)                                   | 120     | 3257$m$            |
+| HC-L2-5           | APs — 3 cables                                                                   | 3       | 66$m$              |
+| HC-L2-5           | External wall outlets — 1 cable (Max: 69$m$)                                     | 1       | 69$m$              |
+| **HC-L2-5 Total** | -                                                                                | **124** | **3392$m$**        |
+| HC-L2-6           | Room outlets (R7: 20.8$m$×42, R9: 5.0$m$×42)                                     | 84      | 1085$m$            |
+| HC-L2-6           | APs — 8 cables                                                                   | 8       | 221$m$             |
+| HC-L2-6           | External wall outlets — 28 cables (Max: 76$m$)                                   | 28      | 2114$m$            |
+| **HC-L2-6 Total** | -                                                                                | **120** | **3420$m$**        |
+| **Level 2 Total** | -                                                                                | **949** | **27526$m$**       |
+
+---
+
+## 6.Hardware Inventory
+
+| Item                                                | Level 0                               | Level 2                                | **Total**    |
+|-----------------------------------------------------|---------------------------------------|----------------------------------------|--------------|
+| Main Cross-connect (MC)                             | 1                                     | —                                      | **1**        |
+| Intermediate Cross-connects (IC)                    | 1                                     | 1                                      | **2**        |
+| Horizontal Cross-connects (HC)                      | 5                                     | 6                                      | **11**       |
+| Access Points (Wi-Fi 5GHz)                          | 34                                    | 40                                     | **74**       |
+| RJ45 CAT7 Network Outlets                           | 784                                   | 949                                    | **1733**     |
+| Copper cable CAT7 (Backbone + IC → HC + Horizontal) | (2$m$ + 640$m$ + 29107$m$) = 29749$m$ | (18$m$ + 772$m$ + 27526$m$) = 28316$m$ | **58065$m$** |
