@@ -270,3 +270,23 @@ there are no dead zones.*
 * APs in rooms: **26**
 * APs in open areas: **87**
 * **TOTAL: 113 Access Points**
+
+---
+
+### 3.3. Hardware Summary
+
+* **Total APs on Level 0:**  107 APs
+* **Total APs on Level 2:** 113 APs
+* **Dedicated Outlets:** Each AP requires an ISO 8877 dedicated outlet in the ceiling.
+
+---
+
+## 5. Hardware Inventory
+
+### 5.1. Access Points and Dedicated Outlets
+
+|       LOCATION        | LEVEL 0 (ARRIVALS) | LEVEL 2 (DEPARTURES) |  TOTAL  |
+|:---------------------:|:------------------:|:--------------------:|:-------:|
+|     APs in Rooms      |         22         |          26          | **48**  |
+|   APs in Open Areas   |         85         |          87          | **172** |
+| Total APs and Outlets |        107         |         113          | **220** |
