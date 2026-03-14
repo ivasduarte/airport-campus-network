@@ -249,6 +249,9 @@ The open areas will be identified with letters in the schematic plan.
 | L          | 293x162           | 101.56x56.15     | 5702.59     | 116.05           | 2               | 8                       |
 | M          | 101x38            | 35.01x13.17      | 461.08      | 37.41            | 1               | 1                       |
 
+**Total Number of Access Points on Level 1: 65**
+> Since 1 dedicated outlet is required for each access point, we require another 65 outlets on level 1.
+
 **Open Area A**
 - $n_{lines} = 1$
 - $y = 15.945 m$
@@ -394,6 +397,8 @@ The open areas will be identified with letters in the schematic plan.
 | 7            | 60.81x42.11    |
 | 8            | 80.87x42.11    |
 
+![Access Points Deployment Schematic Level 1](schematics/Terminal3_Level1_AccessPoints.png)
+
 ---
 
 ### 5.2. Level 2 (Departures)
@@ -436,6 +441,9 @@ The open areas will be identified with letters in the schematic plan.
 | H          | 79x115            | 27.38x39.86      | 1091.37     | 48.36            | 1               | 1                       |
 | I          | 205x346           | 71.06x119.93     | 8522.23     | 139.40           | 3               | 12                      |
 | J          | 46x202            | 15.94x70.02      | 1116.12     | 71.71            | 2               | 2                       |
+
+**Total Number of Access Points on Level 2: 77**
+> Since 1 dedicated outlet is required for each access point, another 77 outlets will be required in level 2
 
 **Open Area A**
 - $n_{lines} = 4$
@@ -606,5 +614,7 @@ The open areas will be identified with letters in the schematic plan.
 |--------------|----------------|
 | 1            | 7.97x17.51     |
 | 2            | 7.97x52.51     |
+
+![Access Points Deployment Schematic Level 1](schematics/Terminal3_Level2_AccessPoints.png)
 
 ---
