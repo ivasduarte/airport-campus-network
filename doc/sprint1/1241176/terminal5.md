@@ -110,3 +110,50 @@ exterior wall and the upper exterior wall.
 * **Upper Exterior Wall:** 150 / 5 = 30 outlets
 * **Right Exterior Wall:** 400 / 5 = 80 outlets
 * **Total External Outlets:** 110 outlets
+
+---
+
+## 3. Access Points
+
+> Both floors require LAN coverage (Wi-Fi)
+
+> Each Access Point covers a circle of $50m$ diameter
+
+> All APs will be installed in the space above the dropped ceiling
+
+> Each AP will require **a dedicated outlet**
+
+> All APs on this terminal will operate on **5GHz band**, since this band offers a much larger number of available
+channels, and it also has **DFS (Dynamic Frequency Selection)**, which selects a channel in order avoid interference
+with it's neighbours.
+
+
+### 3.1. Calc Methology
+We will use the diagonal check for rooms and the density formula for open areas:
+
+* **Single Coverage Condition:** $$D_r = \sqrt{length^2 + width^2} \leq D_c = 2 \times radius = 50 meters\ $$
+
+* **Calculation for Wide Areas:** If $D_r \ge 50 meters\ $, then $$ n_{APs} = \lceil (L-2c)/(2c) \rceil + 2 $$
+
+---
+
+#### 3.1.1. Level 0 Rooms
+
+| ROOMS  | $D_r = \sqrt{length^2 + width^2} $ (m) | $D_r \leq 50 meters$? | TOTAL APs |
+|:------:|:--------------------------------------:|:---------------------:|:---------:|
+| **3**  |    $\sqrt{39.3^2 + 14.3^2} = 41.82$    |          Yes          |     1     |
+| **4**  |    $\sqrt{22.2^2 + 14.3^2} = 26.41$    |          Yes          |     1     |
+| **5**  |    $\sqrt{22.3^2 + 14.3^2} = 26.50$    |          Yes          |     1     |
+| **6**  |    $\sqrt{34.8^2 + 14.3^2} = 37.62$    |          Yes          |     1     |
+| **7**  |    $\sqrt{19.6^2 + 14.3^2} = 24.26$    |          Yes          |     1     |
+| **8**  |    $\sqrt{34.8^2 + 14.3^2} = 37.62$    |          Yes          |     1     |
+| **9**  |    $\sqrt{22.2^2 + 14.3^2} = 26.41$    |          Yes          |     1     |
+| **10** |    $\sqrt{14.3^2 + 30.5^2} = 33.68$    |          Yes          |     1     |
+| **11** |    $\sqrt{12.5^2 + 30.5^2} = 32.96$    |          Yes          |     1     |
+| **14** |    $\sqrt{14.3^2 + 28.6^2} = 31.98$    |          Yes          |     1     |
+| **15** |    $\sqrt{25.0^2 + 16.1^2} = 29.73$    |          Yes          |     1     |
+| **19** |    $\sqrt{33.9^2 + 14.3^2} = 36.79$    |          Yes          |     1     |
+| **20** |    $\sqrt{40.2^2 + 14.3^2} = 42.66$    |          Yes          |     1     |
+| **21** |    $\sqrt{28.6^2 + 14.3^2} = 31.98$    |          Yes          |     1     |
+
+**Total APs for Level 0 rooms: 14 Aps (Considering only rooms with standard outlets).**
