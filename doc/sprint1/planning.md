@@ -18,7 +18,7 @@ RCOMP 2025-2026: Project 1 - Sprint 1 Planning
 During our initial planning, the team agreed on the following technical specifications to ensure consistency across all
 terminals:
 
-* **Copper Cable Wiring Standard:** We will adopt the **[T568A ou T568B]** standard for all copper network outlets and
+* **Copper Cable Wiring Standard:** We will adopt the **[T568A or T568B]** standard for all copper network outlets and
   patch panels throughout the project.
 
 * **Campus and Building Backbone:**
@@ -28,7 +28,7 @@ terminals:
     * **Cable Passageways:** The campus backbone will utilize the existing underground technical ditch.
       Inside the buildings, we will use the marked vertical cable passageways, underfloor raceways, and the space over the dropped ceilings.
 
-    * **Redundancy:** Redundant links will be established between **[]** to ensure network fault tolerance.
+    * **Redundancy:** Redundant links will be established between **[MC → IC and IC → HC]** to ensure network fault tolerance.
 
     
 ---

@@ -24,16 +24,14 @@ For the last three cases, a text description of what has not been implemented an
 Unimplemented features and issues solving is assigned to the same member on the next sprint.
 
 ## 2.1. 1241166 - Structured cable design for Terminal 2 #
-
 ### Totally implemented with no issues. ###
 
 ## 2.2. 1241176 - Structured cable design for Terminal 5 #
 ### Totally implemented with issues. ###
 
 
-
 ## 2.3. 1241229 - Structured cable design for Terminal 4 #
-### Partially implemented with issues. ###
+### Totally implemented with no issues ###
 
 
 ## 2.4. 1241234 - Structured cable design for Terminal 3 #
