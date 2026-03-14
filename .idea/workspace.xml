@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/terminal5.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/terminal5.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,10 @@
     <persistenceIdMap>
       <entry key="_C:/Users/joaom/OneDrive/Ambiente de Trabalho/rcomp-25-26-DI-G2" value="3AGDUN1M32xIs3blHqBexNV2hiw" />
     </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="27" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +39,10 @@
     &quot;accountId&quot;: &quot;d6bb6f21-5810-4877-a27b-9f3ab6ffb6fa&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -47,6 +58,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
@@ -113,6 +125,7 @@
       <workItem from="1773437505364" duration="1930000" />
       <workItem from="1773484449915" duration="555000" />
       <workItem from="1773485069113" duration="2248000" />
+      <workItem from="1773505705276" duration="2215000" />
     </task>
     <servers />
   </component>
