@@ -104,6 +104,8 @@ The measurements will be done utilizing pixels and then converted to meters.
 
 As the walls form a 90º angle with each other, they have a common outlet so, in total, we'll have 79 outlets along the external walls.
 
+![Network Outlets Deployment Schematic Level 1](schematics/Terminal3_Level1_Outlets.png)
+
 **Total standard outlets for Level 1: 540 (Rooms) + 79 (External walls) = 619**
 
 ---
@@ -133,11 +135,13 @@ As the walls form a 90º angle with each other, they have a common outlet so, in
 | 15    | 109x36          | 37.78x12.48    | 471.45     | 48            | 86      |
 | 16    | 75x36           | 26.00x12.48    | 324.39     | 33            | 66      |
 | 17    | 63x36           | 21.84x12.48    | 272.49     | 28            | 56      |
-| 18    | 93x36           | 32.24x12.48    | 402.25     | 41            | 62      |
+| 18    | 93x36           | 32.24x12.48    | 402.25     | 41            | 82      |
 | 19    | 61x36           | 21.14x12.48    | 263.84     | 37            | 74      |
 | 20    | 29x36           | 10.05x12.48    | 125.43     | --            | --      |
 
-**Total standard outlets for Level 2: 936**
+![Network Outlets Deployment Schematic Level 2](schematics/Terminal3_Level2_Outlets.png)
+
+**Total standard outlets for Level 2: 956**
 
 ---
 
