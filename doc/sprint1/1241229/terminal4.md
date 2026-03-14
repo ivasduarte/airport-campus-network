@@ -394,8 +394,8 @@ The **X** coordinate of an HC will be chosen based on the rooms they will serve,
 
 ### 4.2. Level 0 - HCs positions and rooms/areas assigned
 
-The IC will be placed within the Room 4, in this case, I considered X = 118 & Y = 3, since it makes the IC being close to the vertical passageway
-The MC will be co-located with this IC.
+The IC will be placed within the Room 4, in this case, I considered X = 118 & Y = 3, since it makes the IC stand close to the vertical passageway
+The MC will be placed next to this IC.
 
 | HC      | X ($m$) | Y ($m$) | Rooms served                     | Outlets | APs | APs served                 | Total   |
 |---------|---------|---------|----------------------------------|---------|-----|----------------------------|---------|
@@ -485,7 +485,7 @@ All distances will be measured on a straight-line from HC to the room center or 
 
 ### 4.3. Level 2 - HCs positions and rooms/areas assigned
 
-The IC will be placed within the Room 3, in this case, I considered X = 118 & Y = 3, since it makes the IC being close to the vertical passageway
+The IC will be placed within the Room 3, in this case, I considered X = 118 & Y = 3, since it makes the IC stand close to the vertical passageway
 
 | HC      | X ($m$) | Y ($m$) | Rooms served                          | Outlets | APs | APs served                    | Outlets (External Walls) | Total   |
 |---------|---------|---------|---------------------------------------|---------|-----|-------------------------------|--------------------------|---------|
@@ -605,7 +605,7 @@ The IC will be placed within the Room 3, in this case, I considered X = 118 & Y 
 
 ---
 
-### 5.1. MC → IC
+### 5.1. MC → IC (Backbone)
 
 The MC and the IC on Level 0 will be co-located, since both will be on Room 4. We will consider 1$m$ of cable for this connection.
 To connect the MC to the IC on Level 2, we will need to use the vertical passageway to go up 9$m$.
@@ -616,7 +616,7 @@ To connect the MC to the IC on Level 2, we will need to use the vertical passage
 
 ---
 
-### 5.2. IC → HC
+### 5.2. IC → HC 
 
 Since there are 2 ICs, one on each floor, we only need 
 
@@ -640,7 +640,7 @@ Since there are 2 ICs, one on each floor, we only need
 
 ---
 
-### 5.3 HCs - Outlets (Level 0)
+### 5.3 HCs → Outlets (Level 0)
 
 | HC                | Type                                                     | Cables  | Total Cable length |
 |-------------------|----------------------------------------------------------|---------|--------------------|
@@ -663,7 +663,7 @@ Since there are 2 ICs, one on each floor, we only need
 
 ---
 
-### 5.4. Horizontal copper — Level 2
+### 5.4. HCs → Outlets — Level 2
 
 | HC                | Type                                                                             | Cables  | Total Cable length |
 |-------------------|----------------------------------------------------------------------------------|---------|--------------------|
@@ -672,7 +672,7 @@ Since there are 2 ICs, one on each floor, we only need
 | **HC-L2-1 Total** | -                                                                                | **198** | **6242$m$**        |
 | HC-L2-2           | Room outlets (R2: 51.4$m$×76, R13: 8.3$m$×30, R18: 15.2$m$×56)                   | 162     | 5007$m$            |
 | HC-L2-2           | APs — 7 cables                                                                   | 7       | 246$m$             |
-| HC-L2-2           | External wall outlets — 19 cables (Max: 78)                                      | 19      | 1490$m$            |
+| HC-L2-2           | External wall outlets — 19 cables (Max: 78$m$)                                   | 19      | 1490$m$            |
 | **HC-L2-2 Total** | -                                                                                | **188** | **6743$m$**        |
 | HC-L2-3           | Room outlets (R14: 12.5$m$×36, R19: 23.74$m$×76)                                 | 112     | 2254$m$            |
 | HC-L2-3           | APs — 7 cables                                                                   | 7       | 213$m$             |
@@ -691,3 +691,16 @@ Since there are 2 ICs, one on each floor, we only need
 | HC-L2-6           | External wall outlets — 28 cables (Max: 76$m$)                                   | 28      | 2114$m$            |
 | **HC-L2-6 Total** | -                                                                                | **120** | **3420$m$**        |
 | **Level 2 Total** | -                                                                                | **949** | **27526$m$**       |
+
+---
+
+## 6.Hardware Inventory
+
+| Item                                                | Level 0                               | Level 2                                | **Total**    |
+|-----------------------------------------------------|---------------------------------------|----------------------------------------|--------------|
+| Main Cross-connect (MC)                             | 1                                     | —                                      | **1**        |
+| Intermediate Cross-connects (IC)                    | 1                                     | 1                                      | **2**        |
+| Horizontal Cross-connects (HC)                      | 5                                     | 6                                      | **11**       |
+| Access Points (Wi-Fi 5GHz)                          | 34                                    | 40                                     | **74**       |
+| RJ45 CAT7 Network Outlets                           | 784                                   | 949                                    | **1733**     |
+| Copper cable CAT7 (Backbone + IC → HC + Horizontal) | (2$m$ + 640$m$ + 29107$m$) = 29749$m$ | (18$m$ + 772$m$ + 27526$m$) = 28316$m$ | **58065$m$** |
