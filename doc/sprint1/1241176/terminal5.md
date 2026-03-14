@@ -234,3 +234,39 @@ interference.*
 | **26** |   $\sqrt{14.29^2 + 14.29^2} = 20.21$   |          Yes          |     1     |
 
 **Total APs for Level 2 rooms: 26 APs (Considering only rooms with standard outlets).**
+
+#### 3.2.1. Level 2 Open Areas
+
+Due to the large size of the T5 ($400m$ long), we will divide the open area into zones for greater accuracy.
+
+| ZONE  | DIMENSIONS ($cm$) | DIEMENSIONS ($m$) |    $n_{lines} = \lceil H/(2R) \rceil$     |     $y_i = H(2i - 1)/(2n_{lines})$     |    $d = min(y_i, H - y_i)$    |      $c = \sqrt{R² - d²}$       |  $D_r$   |         $n_{APs} = \lceil (L-2c)/(2c) \rceil + 2$         | TOTAL  |
+|:-----:|:-----------------:|:-----------------:|:-----------------------------------------:|:--------------------------------------:|:-----------------------------:|:-------------------------------:|:--------:|:---------------------------------------------------------:|:------:|
+| **A** |     3.2 x 0.8     |  $57.14 x 14.29$  | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | $58.90$  |  $\lceil \frac{57.14 - 47.92}{47.92} \rceil \!+\! 2 = 3$  | **3**  |
+| **B** |     5.6 x 0.8     | $100.00 x 14.29$  | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | $101.02$ | $\lceil \frac{100.00 - 47.92}{47.92} \rceil \!+\! 2 = 4$  | **4**  |
+| **C** |     2.7 x 1.8     |  $48.21 x 32.14$  | $n_{lines} = \lceil 32.14/50 \rceil = 1$  |  $\lceil (32.14(1))/2 \rceil = 16.07$  | $\min(16.07, 16.07) = 16.07$  | $\sqrt{25^2 - 16.07^2} = 19.15$ | $57.94$  |  $\lceil \frac{48.21 - 38.30}{38.30} \rceil \!+\! 2 = 3$  | **3**  |
+| **D** |     1.6 x 1.9     |  $28.57 x 33.93$  | $n_{lines} = \lceil 33.93/50 \rceil = 1$  |  $\lceil (33.93(1))/2 \rceil = 16.97$  | $\min(16.97, 16.96) = 16.97$  | $\sqrt{25^2 - 16.97^2} = 18.36$ | $44.36$  |  $\lceil \frac{28.57 - 36.72}{36.72} \rceil \!+\! 2 = 2$  | **1**  |
+| **E** |     0.9 x 1.3     |  $16.07 x 23.21$  | $n_{lines} = \lceil 23.21/50 \rceil = 1$  |  $\lceil (23.21(1))/2 \rceil = 11.61$  | $\min(11.61, 11.60) = 11.61$  | $\sqrt{25^2 - 11.61^2} = 22.13$ | $28.23$  |  $\lceil \frac{16.07 - 44.26}{44.26} \rceil \!+\! 2 = 2$  | **1**  |
+| **F** |     2.0 x 2.2     |  $35.71 x 39.29$  | $n_{lines} = \lceil 39.29/50 \rceil = 1$  |  $\lceil (39.29(1))/2 \rceil = 19.65$  | $\min(19.65, 19.64) = 19.65$  | $\sqrt{25^2 - 19.65^2} = 15.45$ | $53.09$  |  $\lceil \frac{35.71 - 30.90}{30.90} \rceil \!+\! 2 = 3$  | **3**  |
+| **G** |    15.1 x 1.2     | $269.64 x 21.43$  | $n_{lines} = \lceil 21.43/50 \rceil = 1$  |  $\lceil (21.43(1))/2 \rceil = 10.72$  | $\min(10.72, 10.71) = 10.72$  | $\sqrt{25^2 - 10.72^2} = 22.58$ | $270.49$ | $\lceil \frac{269.64 - 45.16}{45.16} \rceil \!+\! 2 = 7$  | **7**  |
+| **H** |    4.5 x 15.1     | $80.36 x 269.64$  | $n_{lines} = \lceil 269.64/50 \rceil = 6$ | $\lceil (269.64(1))/12 \rceil = 22.47$ | $\min(22.47, 247.17) = 22.47$ | $\sqrt{25^2 - 22.47^2} = 10.96$ | $281.36$ |  $\lceil \frac{80.36 - 21.92}{21.92} \rceil \!+\! 2 = 5$  | **30** |
+| **I** |     2.9 x 0.6     |  $51.79 x 10.71$  | $n_{lines} = \lceil 10.71/50 \rceil = 1$  |  $\lceil (10.71(1))/2 \rceil = 5.36$   |   $\min(5.36, 5.35) = 5.36$   | $\sqrt{25^2 - 5.36^2} = 24.42$  | $52.89$  |  $\lceil \frac{51.79 - 48.84}{48.84} \rceil \!+\! 2 = 3$  | **3**  |
+| **J** |     1.4 x 2.2     |  $25.00 x 39.29$  | $n_{lines} = \lceil 39.29/50 \rceil = 1$  |  $\lceil (39.29(1))/2 \rceil = 19.65$  | $\min(19.65, 19.64) = 19.65$  | $\sqrt{25^2 - 19.65^2} = 15.45$ | $46.57$  |  $\lceil \frac{25.00 - 30.90}{30.90} \rceil \!+\! 2 = 2$  | **1**  |
+| **K** |     1.3 x 1.2     |  $23.21 x 21.43$  | $n_{lines} = \lceil 21.43/50 \rceil = 1$  |  $\lceil (21.43(1))/2 \rceil = 10.72$  | $\min(10.72, 10.71) = 10.72$  | $\sqrt{25^2 - 10.72^2} = 22.58$ | $31.59$  |  $\lceil \frac{23.21 - 45.16}{45.16} \rceil \!+\! 2 = 2$  | **1**  |
+| **L** |       1 x 1       |  $17.86 x 17.86$  | $n_{lines} = \lceil 17.86/50 \rceil = 1$  |  $\lceil (17.86(1))/2 \rceil = 8.93$   |   $\min(8.93, 8.93) = 8.93$   | $\sqrt{25^2 - 8.93^2} = 23.35$  | $25.26$  |  $\lceil \frac{17.86 - 46.70}{46.70} \rceil \!+\! 2 = 2$  | **1**  |
+| **M** |     5.4 x 2.1     |  $96.43 x 37.50$  | $n_{lines} = \lceil 37.50/50 \rceil = 1$  |  $\lceil (37.50(1))/2 \rceil = 18.75$  | $\min(18.75, 18.75) = 18.75$  | $\sqrt{25^2 - 18.75^2} = 16.54$ | $103.46$ |  $\lceil \frac{96.43 - 33.08}{33.08} \rceil \!+\! 2 = 4$  | **4**  |
+| **N** |     1.6 x 0.8     |  $28.57 x 14.29$  | $n_{lines} = \lceil 14.29/50 \rceil = 1$  |  $\lceil (14.29(1))/2 \rceil = 7.15$   |   $\min(7.15, 7.14) = 7.15$   | $\sqrt{25^2 - 7.15^2} = 23.96$  | $31.94$  |  $\lceil \frac{28.57 - 47.92}{47.92} \rceil \!+\! 2 = 2$  | **1**  |
+| **O** |    1.5 x 19.7     | $26.79 x 351.79$  | $n_{lines} = \lceil 351.79/50 \rceil = 8$ | $\lceil (351.79(1))/16 \rceil = 21.99$ | $\min(21.99, 329.80) = 21.99$ | $\sqrt{25^2 - 21.99^2} = 11.90$ | $352.81$ |  $\lceil \frac{26.79 - 23.80}{23.80} \rceil \!+\! 2 = 3$  | **24** |
+
+*\*Note about Zones H and O: DDue to the high height/length in these zones, multiple coverage lines ($n_{lines}$) were
+calculated. For Zone H, with 6 lines and a horizontal distribution of 5 APs per line, we total 30 units to ensure
+there are no dead zones.*
+
+**Estimated Total for Open Areas: 87 APs**
+
+---
+
+#### Summary of APs in Level 2
+
+* APs in rooms: **26**
+* APs in open areas: **87**
+* **TOTAL: 113 Access Points**
