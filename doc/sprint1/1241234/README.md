@@ -614,7 +614,148 @@ The open areas will be identified with letters in the schematic plan.
 |--------------|----------------|
 | 1            | 7.97x17.51     |
 | 2            | 7.97x52.51     |
-
+ 
 ![Access Points Deployment Schematic Level 1](schematics/Terminal3_Level2_AccessPoints.png)
 
 ---
+
+## 6. Cross Connections
+
+> Each cable (whatever their type is) length should be less than 90$m$
+> 
+> Cables connecting an IC to a HC are limited to 500 meters long
+> 
+> Cables connecting a MC to an IC are limited to 1500 meters long
+> 
+> Each enclosure has a size of 42U, which means it allows 200 connections (1U must be free)
+>
+> There must be one IC per level
+> 
+> All HCs will be placed on the dropped ceiling
+
+---
+
+### 6.1. Positioning of HCs
+
+For the HCs, we will divide both levels of the terminal into a **3x3 grid** and place one HC in the center of each square of the grid. This will give us a total of **9 HCs per level** and remove the need of consolidation points from the terminal, reducing the chances of a potential point of failure. On top of that, it'll allow easier maintenance.
+
+---
+
+#### 6.1.1. Level 1 (Arrivals)
+
+| HC       | Position ($m$) | Rooms covered | Areas covered | Outlets | APs | Total Connections |
+|----------|----------------|---------------|---------------|---------|-----|-------------------|
+| HC-L1-01 | 33.33x33.33    | None          | A, B          | 27      | 5   | 32                |
+| HC-L1-02 | 99.99x33.33    | 2, 4          | A, B, G, H    | 94      | 7   | 101               |
+| HC-L1-03 | 166.65x33.33   | 1, 3, 5       | A, G, I       | 42      | 9   | 51                |
+| HC-L1-04 | 33.33x99.99    | None          | B, D          | 12      | 7   | 19                |
+| HC-L1-05 | 99.99x99.99    | 4, 7, 8, 9    | B, C, E, J    | 113     | 7   | 120               | 
+| HC-L1-06 | 166.65x99.99   | 5, 6          | E, J, K       | 20      | 6   | 26                |
+| HC-L1-07 | 33.33x166.65   | 11            | F             | 14      | 9   | 23                |
+| HC-L1-08 | 99.99x166.65   | 9, 10, 12     | L, M          | 163     | 6   | 169               |
+| HC-L1-09 | 166.65x166.65  | 13, 14, 15    | L             | 134     | 9   | 143               |
+
+**Total: 9 HCs**
+
+As each HC is positioned in the center of a 66.66x66.66 area, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to 47.136 $m$ which is well below the 80 $m$ range of copper cables.
+
+#### 6.1.2. Level 2 (Departures)
+
+| HC       | Position ($m$) | Rooms covered | Areas covered | Outlets | APs | Total Connections |
+|----------|----------------|---------------|---------------|---------|-----|-------------------|
+| HC-L2-01 | 33.33x33.33    | 3             | A, B          | 49      | 5   | 54                |
+| HC-L2-02 | 99.99x33.33    | 3, 5          | B, C, F       | 55      | 10  | 65                |
+| HC-L2-03 | 166.65x33.33   | 1, 2, 4, 6    | C, F          | 116     | 12  | 128               |
+| HC-L2-04 | 33.33x99.99    | None          | A, D          | 0       | 10  | 10                |
+| HC-L2-05 | 99.99x99.99    | 5, 7, 8, 10   | E, G, I       | 101     | 9   | 110               |
+| HC-L2-06 | 166.65x99.99   | 6, 9          | I, J          | 0       | 9   | 9                 |
+| HC-L2-07 | 33.33x166.65   | 13, 14, 15    | A, D          | 131     | 8   | 139               |
+| HC-L2-08 | 99.99x158.40   | 10, 11, 12    | H, I          | 189     | 5   | 194               |
+| HC-L2-09 | 99.99x191.68   | 15, 16, 17    | None          | 159     | 2   | 161               | 
+| HC-L2-10 | 166.65x166.65  | 18, 19, 20    | I, J          | 156     | 7   | 163               |
+
+> As there was one HC that would surpass the limit of 200 connections, we had to divide it into 2 areas so we require one extra HC to cover the whole terminal.
+
+As each HC is positioned in the center of a 66.66x66.66 area, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to 47.136 $m$ which is well below the 80 $m$ range of copper cables. There are two exceptions to this, those being HC-L2-08 and HC-L2-09 which have an even lower max distance.
+
+**Total: 10 HCs**
+
+## 7. Cable Pathways
+
+> The cable length is calculated by using a straight line between the HC and the room/area it serves.
+> 
+> **MC → IC:** The MC will connect to the IC on both levels.
+> 
+> **IC → HC:** The IC will connect to all HCs on its specific level, using the dropped ceiling.
+> 
+> **Room outlets:** $d_{HC \to room\_center} \times N_{outlets}$ — in order to simplify calculations
+>
+> **APs (room or open area):** $d_{HC \to AP\_position}$ - since each AP has a dedicated outlet
+> 
+> **External wall outlets (Level 1):** 
+> 
+> **Cable Redundancy** will be considered to connect **MC → IC** and **IC → HC**
+
+---
+
+### 7.1. MC → IC (Backbone)
+
+The MC and the IC on Level 1 will be co-located, since both will be on Room 15. We will position them beside the vertical passageway and consider 1$m$ of cable for this connection.
+The IC on Level 2 will be positioned beside the vertical passageway on Room 20 as this room is positioned directly above Room 15 of Level 1.
+To connect the MC to the IC on Level 2, we will need to use the vertical passageway to go up 9$m$.
+
+> These connections will be done with multimode optical fiber
+> For calculations, we will consider each IC to be positioned in the coordinates (192.37, 198.61) of its respective level.
+
+**Total cable length for MC → IC connections: 10$m$**
+
+**Total cable length for MC → IC connections (with cable redundancy): 20$m$**
+
+---
+
+### 7.2. IC → HC
+
+The IC of each level will connect directly to all HCs on its respective level.
+
+> These connections will be done with multimode optical fiber
+
+---
+
+#### 7.2.1. Level 1 (Arrivals)
+
+| Connection    | Distance ($m$) |
+|---------------|----------------|
+| IC0 → HC-L0-1 | 229.37         |
+| IC0 → HC-L0-2 | 189.35         |
+| IC0 → HC-L0-3 | 167.27         |
+| IC0 → HC-L0-4 | 187.14         |
+| IC0 → HC-L0-5 | 135.13         |
+| IC0 → HC-L0-6 | 101.92         |
+| IC0 → HC-L0-7 | 162.22         |
+| IC0 → HC-L0-8 | 97.75          |
+| IC0 → HC-L0-9 | 41.02          |
+
+**Total cable length for IC → HC connections : 1311.17$m$**
+
+**Total cable length for IC → HC connections (with cable redundancy) : 2622.34$m$**
+
+---
+
+#### 7.2.1. Level 2 (Departures)
+
+| Connection    | Distance ($m$) |
+|---------------|----------------|
+| IC0 → HC-L0-1 | 229.37         |
+| IC0 → HC-L0-2 | 189.35         |
+| IC0 → HC-L0-3 | 167.27         |
+| IC0 → HC-L0-4 | 187.14         |
+| IC0 → HC-L0-5 | 135.13         |
+| IC0 → HC-L0-6 | 101.92         |
+| IC0 → HC-L0-7 | 162.22         |
+| IC0 → HC-L0-8 | 100.75         |
+| IC0 → HC-L0-9 | 92.64          |
+| IC0 → HC-L0-9 | 41.02          |
+
+**Total cable length for IC → HC connections : 1406.81$m$**
+
+**Total cable length for IC → HC connections (with cable redundancy) : 2813.62$m$**
