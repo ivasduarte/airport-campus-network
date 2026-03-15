@@ -725,15 +725,15 @@ The IC of each level will connect directly to all HCs on its respective level.
 
 | Connection    | Distance ($m$) |
 |---------------|----------------|
-| IC0 → HC-L0-1 | 229.37         |
-| IC0 → HC-L0-2 | 189.35         |
-| IC0 → HC-L0-3 | 167.27         |
-| IC0 → HC-L0-4 | 187.14         |
-| IC0 → HC-L0-5 | 135.13         |
-| IC0 → HC-L0-6 | 101.92         |
-| IC0 → HC-L0-7 | 162.22         |
-| IC0 → HC-L0-8 | 97.75          |
-| IC0 → HC-L0-9 | 41.02          |
+| IC1 → HC-L1-1 | 229.37         |
+| IC1 → HC-L1-2 | 189.35         |
+| IC1 → HC-L1-3 | 167.27         |
+| IC1 → HC-L1-4 | 187.14         |
+| IC1 → HC-L1-5 | 135.13         |
+| IC1 → HC-L1-6 | 101.92         |
+| IC1 → HC-L1-7 | 162.22         |
+| IC1 → HC-L1-8 | 97.75          |
+| IC1 → HC-L1-9 | 41.02          |
 
 **Total cable length for IC → HC connections : 1311.17$m$**
 
@@ -743,18 +743,18 @@ The IC of each level will connect directly to all HCs on its respective level.
 
 #### 7.2.1. Level 2 (Departures)
 
-| Connection    | Distance ($m$) |
-|---------------|----------------|
-| IC0 → HC-L0-1 | 229.37         |
-| IC0 → HC-L0-2 | 189.35         |
-| IC0 → HC-L0-3 | 167.27         |
-| IC0 → HC-L0-4 | 187.14         |
-| IC0 → HC-L0-5 | 135.13         |
-| IC0 → HC-L0-6 | 101.92         |
-| IC0 → HC-L0-7 | 162.22         |
-| IC0 → HC-L0-8 | 100.75         |
-| IC0 → HC-L0-9 | 92.64          |
-| IC0 → HC-L0-9 | 41.02          |
+| Connection     | Distance ($m$) |
+|----------------|----------------|
+| IC2 → HC-L2-1  | 229.37         |
+| IC2 → HC-L2-2  | 189.35         |
+| IC2 → HC-L2-3  | 167.27         |
+| IC2 → HC-L2-4  | 187.14         |
+| IC2 → HC-L2-5  | 135.13         |
+| IC2 → HC-L2-6  | 101.92         |
+| IC2 → HC-L2-7  | 162.22         |
+| IC2 → HC-L2-8  | 100.75         |
+| IC2 → HC-L2-9  | 92.64          |
+| IC2 → HC-L2-10 | 41.02          |
 
 **Total cable length for IC → HC connections : 1406.81$m$**
 
@@ -849,3 +849,17 @@ We will utilize the formula previously mentioned for the calculations.
 | HC-L2-10  | Room Outlets (R18: 30.30$m$ * 82 / R19: 27.73$m$ * 74) | 156     | 4536.62            |
 | HC-L2-10  | Access Points — 7                                      | 7       | 163.04             |
 | **Total** | ------------------------------------------------------ | **163** | **4699.66**        |
+
+---
+
+## 8. Hardware Inventory
+
+| Item                                        | Level 0                          | Level 2                           | **Total**       |
+|---------------------------------------------|----------------------------------|-----------------------------------|-----------------|
+| Main Cross-connect (MC)                     | 1                                | —                                 | **1**           |
+| Intermediate Cross-connects (IC)            | 1                                | 1                                 | **2**           |
+| Horizontal Cross-connects (HC)              | 9                                | 10                                | **19**          |
+| Access Points (Wi-Fi 5GHz)                  | 34                               | 40                                | **74**          |
+| Network Outlets                             | 619                              | 956                               | **1575**        |
+| Copper cable CAT7 (Horizontal)              | 17001.47$m$                      | 25471.12$m$                       | **42472.59$m$** |
+| Multimode optical fibre (MC → IC + IC → HC) | (2$m$ + 2622.34$m$) = 2624.34$m$ | (18$m$ + 2813.62$m$) = 2831.62$m$ | **5455.96$m$**  |
