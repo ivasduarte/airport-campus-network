@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241229/assets/APsLevel0.png" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241229/assets/APsLevel0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +77,14 @@
       <recent name="C:\Users\ivadu\OneDrive\Documents\GitHub\rcomp-25-26-DI-G2\doc\sprint2" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -116,6 +124,8 @@
       <workItem from="1773484449915" duration="555000" />
       <workItem from="1773485069113" duration="2248000" />
       <workItem from="1773505705276" duration="2215000" />
+      <workItem from="1773523564810" duration="458000" />
+      <workItem from="1773577475108" duration="347000" />
     </task>
     <servers />
   </component>
