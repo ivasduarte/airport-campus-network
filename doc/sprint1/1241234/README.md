@@ -106,6 +106,10 @@ As the walls form a 90º angle with each other, they have a common outlet so, in
 
 ![Network Outlets Deployment Schematic Level 1](schematics/Terminal3_Level1_Outlets.png)
 
+> Green Outlet = 1 outlet
+> Blue Outlet = 2 outlets
+> Yellow Outlet = 4 outlets
+
 **Total standard outlets for Level 1: 540 (Rooms) + 79 (External walls) = 619**
 
 ---
@@ -140,6 +144,10 @@ As the walls form a 90º angle with each other, they have a common outlet so, in
 | 20    | 29x36           | 10.05x12.48    | 125.43     | --            | --      |
 
 ![Network Outlets Deployment Schematic Level 2](schematics/Terminal3_Level2_Outlets.png)
+
+> Green Outlet = 1 outlet
+> Blue Outlet = 2 outlets
+> Yellow Outlet = 4 outlets
 
 **Total standard outlets for Level 2: 956**
 
@@ -655,6 +663,8 @@ For the HCs, we will divide both levels of the terminal into a **3x3 grid** and 
 | HC-L1-08 | 99.99x166.65   | 9, 10, 12     | L, M          | 163     | 6   | 169               |
 | HC-L1-09 | 166.65x166.65  | 13, 14, 15    | L             | 134     | 9   | 143               |
 
+![HC Deployment Schematic Level 1](schematics/Terminal3_Level1_HC.png)
+
 **Total: 9 HCs**
 
 As each HC is positioned in the center of a **66.66x66.66 area**, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to **47.136$m$** which is well below the **80$m$** range of copper cables.
@@ -678,7 +688,11 @@ As each HC is positioned in the center of a **66.66x66.66 area**, the max distan
 
 As each HC is positioned in the center of a **66.66x66.66 area**, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to **47.136$m$** which is well below the **80$m$** range of copper cables. There are two exceptions to this, those being HC-L2-08 and HC-L2-09 which have an even lower max distance.
 
+![HC Deployment Schematic Level 1](schematics/Terminal3_Level2_HC.png)
+
 **Total: 10 HCs**
+
+---
 
 ## 7. Cable Pathways
 
@@ -813,6 +827,10 @@ We will utilize the formula previously mentioned for the calculations.
 | HC-L1-09  | Access Points — 9                                    | 9       | 234.44             |
 | **Total** | ---------------------------------------------------- | **143** | **4196.42**        |
 
+![Cable Pathways Deployment Schematic Level 1](schematics/Terminal3_Level1_Cables.png)
+
+---
+
 #### 7.3.2. Level 2 (Departures)
 
 > To simplify the calculations in the case of a HC covering less than half of a room, we will utilize the distance between the HC and the end middle point of the area of the room that it covers.
@@ -849,6 +867,8 @@ We will utilize the formula previously mentioned for the calculations.
 | HC-L2-10  | Room Outlets (R18: 30.30$m$ * 82 / R19: 27.73$m$ * 74) | 156     | 4536.62            |
 | HC-L2-10  | Access Points — 7                                      | 7       | 163.04             |
 | **Total** | ------------------------------------------------------ | **163** | **4699.66**        |
+
+![Cable Pathways Deployment Schematic Level 2](schematics/Terminal3_Level2_Cables.png)
 
 ---
 
