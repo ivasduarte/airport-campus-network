@@ -260,6 +260,9 @@
 > would make the diagram too difficult to read.
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
+>
+> **Yellow** represents **4** outlets, **Red** represents **2** outlets and **Blue** represents 1 outlet. <br>
+> For clarity reasons the wall outlets won't be placed on the schematic.
 
 ![Network Outlets Deployment Schematic Plan Level 1](assets/EsquemaOutletsLevel1.jpg) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
@@ -552,6 +555,9 @@
 > would make the diagram too difficult to read.
 >
 > When placing the outlets, no point in each room can be more than 3 meters away from one.
+>
+> **Yellow** represents **4** outlets, **Red** represents **2** outlets and **Blue** represents 1 outlet. <br>
+> For clarity reasons the wall outlets won't be placed on the schematic.
 
 ![Network Outlets Deployment Schematic Plan Level 4](assets/EsquemaOutletsLevel4.jpg) <br>
 **(For clarity, outlets associated with Access Points will be shown on a separate schematic)**
@@ -729,6 +735,16 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 
 ---
 
+#### Schematic Plan (Cross Connections)
+
+> This schematic shows how to place HCs and IC on Level 1
+>
+> **Red** represents the MC, **Blue** the IC, **Green** the HC and **Yellow** the CPs.
+
+![Cross Connections Schematic](assets/HCsLevel1.jpg)
+
+---
+
 ### 4.2. Level 4 - HCs & CPs positions and rooms/areas assigned
 
 At this level we will only need to place an IC. <br>
@@ -823,8 +839,8 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 |:-----------|:---------------|:---------|
 | **R6**     | (139.78; 6.74) | 41.25$m$ |
 | **R7**     | (174.78; 6.74) | 76.01$m$ |
-| **AP6**    | (139.78; 6.74) | $m$      |
-| **AP7**    | (174.78; 6.74) | $m$      |
+| **AP6**    | (139.78; 6.74) | 41.25$m$ |
+| **AP7**    | (174.78; 6.74) | 76.01$m$ |
 
 **CP-L4-05**
 
@@ -833,11 +849,11 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 | **R4**     | (73.7; 5.22)   | 26.61$m$ |
 | **R5**     | (103.26; 6.74) | 7.79$m$  |
 | **R9**     | (90.65; 23.48) | 13.20$m$ |
-| **AP4**    | (73.7; 5.22)   | $m$      |
-| **AP5**    | (103.26; 6.74) | $m$      |
-| **AP9**    | (90.65; 23.48) | $m$      |
+| **AP4**    | (73.7; 5.22)   | 26.61$m$ |
+| **AP5**    | (103.26; 6.74) | 7.79$m$  |
+| **AP9**    | (90.65; 23.48) | 13.20$m$ |
 
-**CP-L4-06** 
+**CP-L4-06**
 
 | Connection | Coordinates     | Distance |
 |:-----------|:----------------|:---------|
@@ -845,10 +861,10 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 | **R12**    | (90.65; 62.17)  | 11.79$m$ |
 | **R13**    | (90.65; 82.0)   | 14.28$m$ |
 | **R14**    | (90.65; 98.7)   | 29.47$m$ |
-| **AP11**   | (90.65; 42.83)  | $m$      |
-| **AP12**   | (90.65; 62.17)  | $m$      |
-| **AP13**   | (90.65; 82.0)   | $m$      |
-| **AP14**   | (90.65; 98.7)   | $m$      |
+| **AP11**   | (90.65; 42.83)  | 28.87$m$ |
+| **AP12**   | (90.65; 62.17)  | 11.79$m$ |
+| **AP13**   | (90.65; 82.0)   | 14.28$m$ |
+| **AP14**   | (90.65; 98.7)   | 29.47$m$ |
 | **AP32**   | (115.22; 32.39) | 41.35$m$ |
 | **AP33**   | (149.57; 32.39) | 63.25$m$ |
 | **AP35**   | (115.22; 59.57) | 19.49$m$ |
@@ -856,12 +872,12 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 | **AP38**   | (115.22; 86.52) | 22.80$m$ |
 | **AP39**   | (149.57; 86.52) | 53.01$m$ |
 
-**CP-L4-07** 
+**CP-L4-07**
 
 | Connection | Coordinates    | Distance |
 |:-----------|:---------------|:---------|
 | **R10**    | (33.26; 42.83) | 13.61$m$ |
-| **AP10**   | (33.26; 42.83) | $m$      |
+| **AP10**   | (33.26; 42.83) | 13.61$m$ |
 | **AP20**   | (22.17; 23.26) | 35.22$m$ |
 | **AP21**   | (61.09; 23.26) | 31.89$m$ |
 | **AP22**   | (9.13; 73.91)  | 42.42$m$ |
@@ -873,7 +889,7 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 | **AP28**   | (35.65; 125.0) | 75.02$m$ |
 | **AP29**   | (66.96; 125.0) | 77.81$m$ |
 
-**Remaining APs - Directly to HC** 
+**Remaining APs - Directly to HC**
 
 | Connection | Coordinates      | Distance |
 |:-----------|:-----------------|:---------|
@@ -881,3 +897,115 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 | **AP44**   | (119.35; 150.0)  | 53.61$m$ |
 
 ---
+
+#### Schematic Plan (Cross Connections)
+
+> This schematic shows how to place HCs and IC on Level 4
+>
+> **Blue** represents the IC, **Green** the HC and **Yellow** the CPs.
+
+![Cross Connections Schematic](assets/HCsLevel4.jpg)
+
+---
+
+## 5. Cable Pathways
+
+> The cable length is calculated by using the straight line between the HC and the room/area it serves.
+>
+> **MC → IC:** The MC will connect to the IC on both levels.
+>
+> **IC → HC:** The IC will connect to all HCs on their specific level, using the dropped ceiling.
+>
+> **Room outlets:** $d_{HC \to room\_center} \times N_{outlets}$ — in order to simplify calculations
+>
+> **APs (room or open area):** $d_{HC \to AP\_position}$ - since each AP has a dedicated outlet
+>
+> **Cable Redundancy** will be considered to connect **MC → IC** and **IC → HC**
+
+---
+
+### 5.1. MC → IC (Backbone)
+
+The MC and the IC on Level 1 will be co-located, since both of them will be on Room 12.
+We will consider 1$m$ of cable for this connection. <br>
+To connect the MC to the IC on Level 2 (Room 18), we will need to use the vertical passageway to go up 15$m$.
+
+**Total cable length for MC → IC connections: 16$m$**
+
+**Total cable length for MC → IC connections (with cable redundancy): 32$m$**
+
+### 5.2. IC → HC
+
+Since there are 2 ICs, one on each floor, we only need:
+
+| Connection  | Distance  |
+|-------------|-----------|
+| IC1 → HC-L1 | 133.49$m$ |
+| IC4 → HC-L4 | 134.50$m$ |
+
+**Total cable length for IC → HC connections : 267.99$m$**
+
+**Total cable length for IC → HC connections (with cable redundancy) : 535.98$m$**
+
+---
+
+### 5.3. HC → CP
+
+| Connection       | Distance |
+|------------------|----------|
+| HC-L1 → CP-L1-01 | 100$m$   |
+| HC-L1 → CP-L1-02 | 100$m$   |
+| HC-L1 → CP-L1-03 | 90.95$m$ |
+| HC-L1 → CP-L1-04 | 91.86$m$ |
+| HC-L1 → CP-L1-05 | 21.56$m$ |
+| HC-L4 → CP-L1-01 | 100$m$   |
+| HC-L4 → CP-L1-02 | 100$m$   |
+| HC-L4 → CP-L1-03 | 89.74$m$ |
+| HC-L4 → CP-L1-04 | 89.53$m$ |
+| HC-L4 → CP-L1-05 | 86.71$m$ |
+| HC-L4 → CP-L1-06 | 29.57$m$ |
+| HC-L4 → CP-L1-07 | 74.37$m$ |
+
+---
+
+### 5.4. HP → Outlet
+
+| CP       | Type                                              | Cables | Total Cable length |
+|----------|---------------------------------------------------|--------|--------------------|
+| CP-L1-01 | **Wall Outlets**: 1756.4$m$ & **APs**: 401.25$m$  | 48     | 2157.65$m$         |
+| CP-L1-02 | **Wall Outlets**: 1756.4$m$ & **APs**: 643.58$m$  | 51     | 2399.98$m$         |
+| CP-L1-03 | **Room Outlets**: 7518.0$m$ & **APs**: 261.22$m$  | 183    | 7779.22$m$         |
+| CP-L1-04 | **Room Outlets**: 2718.9$m$ & **APs**: 210.15$m$  | 153    | 2929.05$m$         |
+| CP-L1-05 | **Room Outlets**: 4347.7$m$ & **APs**: 518.00$m$  | 193    | 4865.70$m$         |
+| CP-L4-01 | **Wall Outlets**: 1732.0$m$ & **APs**: 624.49$m$  | 53     | 2356.49$m$         |
+| CP-L4-02 | **Wall Outlets**: 1756.2$m$ & **APs**: 388.75$m$  | 45     | 2144.95$m$         |
+| CP-L4-03 | **Room Outlets**: 8234.4$m$ & **APs**: 159.98$m$  | 156    | 8394.38$m$         |
+| CP-L4-04 | **Room Outlets**: 11168.0$m$ & **APs**: 117.26$m$ | 191    | 11285.3$m$         |
+| CP-L4-05 | **Room Outlets**: 2638.6$m$ & **APs**: 47.60$m$   | 200    | 2686.20$m$         |
+| CP-L4-06 | **Room Outlets**: 3862.9$m$ & **APs**: 335.99$m$  | 200    | 4198.89$m$         |
+| CP-L4-07 | **Room Outlets**: 1116.0$m$ & **APs**: 494.62$m$  | 93     | 1610.62$m$         |
+
+---
+
+#### Schematic Plan (Cable Pathways)
+
+**Level 1 - Cable Schematic**
+![Cable Pathways Level 1](assets/CablesLevel1.jpg)
+
+**Level 4 - Cable Schematic**
+![Cable Pathways Level 4](assets/CablesLevel4.jpg)
+
+---
+
+## 6.Hardware Inventory
+
+| Item                                                 | Level 1     | Level 4     | **Total**       |
+|------------------------------------------------------|-------------|-------------|-----------------|
+| Main Cross-connect (MC)                              | 1           | —           | **1**           |
+| Intermediate Cross-connects (IC)                     | 1           | 1           | **2**           |
+| Horizontal Cross-connects (HC)                       | 1           | 1           | **2**           |
+| Consolidation Point (CP)                             | 5           | 7           | **12**          |
+| Access Points (Wi-Fi 5GHz)                           | 54          | 52          | **106**         |
+| RJ45 CAT7 Network Outlets                            | 640         | 944         | **1584**        |
+| Copper Cable CAT7 (Horizontal Connections)           | 20801.29$m$ | 32749.12$m$ | **53550.41$m$** |
+| Fibre Cable Multimode (Backbone + IC → HC + HC → CP) | 673.35$m$   | 868.92$m$   | **1542.27$m$**  |
