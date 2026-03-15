@@ -735,16 +735,6 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 
 ---
 
-#### Schematic Plan (Cross Connections)
-
-> This schematic shows how to place HCs and IC on Level 1
->
-> **Red** represents the MC, **Blue** the IC, **Green** the HC and **Yellow** the CPs.
-
-![Cross Connections Schematic](assets/HCsLevel1.jpg)
-
----
-
 ### 4.2. Level 4 - HCs & CPs positions and rooms/areas assigned
 
 At this level we will only need to place an IC. <br>
@@ -898,16 +888,6 @@ as the wall size is of 200$m$ total, and the CP is being placed in the middle.
 
 ---
 
-#### Schematic Plan (Cross Connections)
-
-> This schematic shows how to place HCs and IC on Level 4
->
-> **Blue** represents the IC, **Green** the HC and **Yellow** the CPs.
-
-![Cross Connections Schematic](assets/HCsLevel4.jpg)
-
----
-
 ## 5. Cable Pathways
 
 > The cable length is calculated by using the straight line between the HC and the room/area it serves.
@@ -988,6 +968,14 @@ Since there are 2 ICs, one on each floor, we only need:
 ---
 
 #### Schematic Plan (Cable Pathways)
+
+> These schematics show how the MC, ICs, HCs and CPs were placed on both levels. <br>
+> They also show connections between all the components.
+>
+> **Red** represents the MC, **Blue** the IC, **Green** the HC and **Yellow** the CPs. <br>
+> For the connections **Light Gray** represents Copper Cables, while **Lilac** represents Fibre Cables.
+> 
+> Note: These schematics don't have the connections of APs, as doing so will make it almost impossible to understand them.
 
 **Level 1 - Cable Schematic**
 ![Cable Pathways Level 1](assets/CablesLevel1.jpg)
