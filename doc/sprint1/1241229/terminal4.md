@@ -726,11 +726,12 @@ Since there are 2 ICs, one on each floor, we only need
 
 ## 6.Hardware Inventory
 
-| Item                                                | Level 0                               | Level 2                                | **Total**    |
-|-----------------------------------------------------|---------------------------------------|----------------------------------------|--------------|
-| Main Cross-connect (MC)                             | 1                                     | —                                      | **1**        |
-| Intermediate Cross-connects (IC)                    | 1                                     | 1                                      | **2**        |
-| Horizontal Cross-connects (HC)                      | 5                                     | 6                                      | **11**       |
-| Access Points (Wi-Fi 5GHz)                          | 34                                    | 40                                     | **74**       |
-| RJ45 CAT7 Network Outlets                           | 784                                   | 949                                    | **1733**     |
-| Copper cable CAT7 (Backbone + IC → HC + Horizontal) | (2$m$ + 640$m$ + 29028$m$) = 29670$m$ | (18$m$ + 772$m$ + 28991$m$) = 29781$m$ | **59451$m$** |
+| Item                                        | Level 0                  | Level 2                   | **Total**    |
+|---------------------------------------------|--------------------------|---------------------------|--------------|
+| Main Cross-connect (MC)                     | 1                        | —                         | **1**        |
+| Intermediate Cross-connects (IC)            | 1                        | 1                         | **2**        |
+| Horizontal Cross-connects (HC)              | 5                        | 6                         | **11**       |
+| Access Points (Wi-Fi 5GHz)                  | 34                       | 40                        | **74**       |
+| Network Outlets                             | 784                      | 949                       | **1733**     |
+| Copper cable CAT7 (Horizontal)              | 29028$m$                 | 28991$m$                  | **58019$m$** |
+| Multimode optical fibre (MC → IC + IC → HC) | (2$m$ + 640$m$) = 642$m$ | (18$m$ + 772$m$) = 790$m$ | **1432$m$**  |
