@@ -646,10 +646,10 @@ For the HCs, we will divide both levels of the terminal into a **3x3 grid** and 
 | HC       | Position ($m$) | Rooms covered | Areas covered | Outlets | APs | Total Connections |
 |----------|----------------|---------------|---------------|---------|-----|-------------------|
 | HC-L1-01 | 33.33x33.33    | None          | A, B          | 27      | 5   | 32                |
-| HC-L1-02 | 99.99x33.33    | 2, 4          | A, B, G, H    | 94      | 7   | 101               |
+| HC-L1-02 | 99.99x33.33    | 2, 4          | A, B, G, H    | 98      | 7   | 105               |
 | HC-L1-03 | 166.65x33.33   | 1, 3, 5       | A, G, I       | 42      | 9   | 51                |
 | HC-L1-04 | 33.33x99.99    | None          | B, D          | 12      | 7   | 19                |
-| HC-L1-05 | 99.99x99.99    | 4, 7, 8, 9    | B, C, E, J    | 113     | 7   | 120               | 
+| HC-L1-05 | 99.99x99.99    | 4, 7, 8, 9    | B, C, E, J    | 109     | 7   | 116               | 
 | HC-L1-06 | 166.65x99.99   | 5, 6          | E, J, K       | 20      | 6   | 26                |
 | HC-L1-07 | 33.33x166.65   | 11            | F             | 14      | 9   | 23                |
 | HC-L1-08 | 99.99x166.65   | 9, 10, 12     | L, M          | 163     | 6   | 169               |
@@ -657,7 +657,7 @@ For the HCs, we will divide both levels of the terminal into a **3x3 grid** and 
 
 **Total: 9 HCs**
 
-As each HC is positioned in the center of a 66.66x66.66 area, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to 47.136 $m$ which is well below the 80 $m$ range of copper cables.
+As each HC is positioned in the center of a **66.66x66.66 area**, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to **47.136$m$** which is well below the **80$m$** range of copper cables.
 
 #### 6.1.2. Level 2 (Departures)
 
@@ -676,7 +676,7 @@ As each HC is positioned in the center of a 66.66x66.66 area, the max distance o
 
 > As there was one HC that would surpass the limit of 200 connections, we had to divide it into 2 areas so we require one extra HC to cover the whole terminal.
 
-As each HC is positioned in the center of a 66.66x66.66 area, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to 47.136 $m$ which is well below the 80 $m$ range of copper cables. There are two exceptions to this, those being HC-L2-08 and HC-L2-09 which have an even lower max distance.
+As each HC is positioned in the center of a **66.66x66.66 area**, the max distance of a piece of equipment to the HC will be the distance of the HC to the corner of the area. This distance is equal to **47.136$m$** which is well below the **80$m$** range of copper cables. There are two exceptions to this, those being HC-L2-08 and HC-L2-09 which have an even lower max distance.
 
 **Total: 10 HCs**
 
@@ -759,3 +759,93 @@ The IC of each level will connect directly to all HCs on its respective level.
 **Total cable length for IC → HC connections : 1406.81$m$**
 
 **Total cable length for IC → HC connections (with cable redundancy) : 2813.62$m$**
+
+---
+
+### 7.3. HC → Outlets
+
+Each HC will connect to the outlets covered by its own area.
+We will utilize the formula previously mentioned for the calculations.
+
+> These connections will be done with copper cables.
+
+---
+
+#### 7.3.1. Level 1 (Arrivals)
+
+> To simplify the calculations of the outlets on the external walls, we will utilize the maximum distance between the HC and the corner of its covered area and multiply it by the number of external outlets covered for the HCs that cover part of both external walls.
+> For HCs that only cover part of one of the walls, we will utilize the distance between the HC and the middle of that part of the wall.
+>
+> To simplify the calculations in the case of a HC covering less than half of a room, we will utilize the distance between the HC and the end middle point of the area of the room that it covers.
+
+
+| HC        | Connection                                           | Cables  | Total Length ($m$) |
+|-----------|------------------------------------------------------|---------|--------------------|
+| HC-L1-01  | External Outlets (47.136$m$ * 27)                    | 27      | 1272.67            |
+| HC-L1-01  | Access Points — 5                                    | 5       | 108.72             |
+| **Total** | ---------------------------------------------------- | **32**  | **1381.39**        |
+| HC-L1-02  | External Outlets (33.33$m$ * 14)                     | 14      | 466.62             |
+| HC-L1-02  | Room Outlets (R2: 11.54$m$ * 48 / R4: 29.38$m$ * 36) | 84      | 1611.60            |
+| HC-L1-02  | Access Points — 7                                    | 7       | 188.96             |
+| **Total** | ---------------------------------------------------- | **103** | **2267.18**        |
+| HC-L1-03  | External Outlets (33.33$m$ * 12)                     | 12      | 399.96             |
+| HC-L1-03  | Room Outlets (R5: 35.12$m$ * 30)                     | 30      | 1053.60            |
+| HC-L1-03  | Access Points — 9                                    | 9       | 247.4              |
+| **Total** | ---------------------------------------------------- | **51**  | **1700.96**        |
+| HC-L1-04  | External Outlets (33.33$m$ * 12)                     | 12      | 399.96             |
+| HC-L1-04  | Access Points — 7                                    | 7       | 173.12             |
+| **Total** | ---------------------------------------------------- | **19**  | **573.08**         |
+| HC-L1-05  | Room Outlets (R4: 32.34$m$ * 12 / R7: 18.36$m$ * 48) | 60      | 1269.36            |
+| HC-L1-05  | Room Outlets (R8: 4.61$m$ * 34 / R9: 33.45$m$ * 15)  | 49      | 658.49             |
+| HC-L1-05  | Access Points — 7                                    | 7       | 147.47             |
+| **Total** | ---------------------------------------------------- | **92**  | **2075.32**        |
+| HC-L1-06  | Room Outlets (R5: 35.31$m$ * 20)                     | 20      | 706.2              |
+| HC-L1-06  | Access Points — 6                                    | 6       | 141.28             |
+| **Total** | ---------------------------------------------------- | **26**  | **847.48**         |
+| HC-L1-07  | External Outlets (33.33$m$ * 14)                     | 14      | 466.62             |
+| HC-L1-07  | Access Points — 9                                    | 9       | 219.7              |
+| **Total** | ---------------------------------------------------- | **23**  | **686.32**         |
+| HC-L1-08  | Room Outlets (R9: 32.54$m$ * 27 / R10: 14.04 * 62)   | 89      | 1749.06            |
+| HC-L1-08  | Room Outlets (R12: 18.64 * 74)                       | 74      | 1379.36            |
+| HC-L1-08  | Access Points — 6                                    | 6       | 144.9              |
+| **Total** | ---------------------------------------------------- | **169** | **3273.32**        |
+| HC-L1-09  | Room Outlets (R13: 30.78$m$ * 80 / R14: 27.77 * 54)  | 134     | 3961.98            |
+| HC-L1-09  | Access Points — 9                                    | 9       | 234.44             |
+| **Total** | ---------------------------------------------------- | **143** | **4196.42**        |
+
+#### 7.3.2. Level 2 (Departures)
+
+> To simplify the calculations in the case of a HC covering less than half of a room, we will utilize the distance between the HC and the end middle point of the area of the room that it covers.
+
+| HC        | Connection                                             | Cables  | Total Length ($m$) |
+|-----------|--------------------------------------------------------|---------|--------------------|
+| HC-L2-01  | Room Outlets (R1: 35.69$m$ * 49)                       | 49      | 1748.81            |
+| HC-L2-01  | Access Points — 5                                      | 5       | 95.33              |
+| **Total** | ------------------------------------------------------ | **54**  | **1844.14**        |
+| HC-L2-02  | Room Outlets (R3: 33.25$m$ * 55)                       | 55      | 1828.75            |
+| HC-L2-02  | Access Points — 10                                     | 10      | 237.51             |
+| **Total** | ------------------------------------------------------ | **65**  | **2066.26**        |
+| HC-L2-03  | Room Outlets (R2: 27.24$m$ * 58 / R4: 31.76$m$ * 58)   | 116     | 3419.68            |
+| HC-L2-03  | Access Points — 12                                     | 12      | 268.92             |
+| **Total** | ------------------------------------------------------ | **128** | **3688.60**        |
+| HC-L2-04  | Access Points — 10                                     | 10      | 282.17             |
+| **Total** | ------------------------------------------------------ | **10**  | **282.17**         |
+| HC-L2-05  | Room Outlets (R7: 18.92$m$ * 66 / R10: 33.76$m$ * 35)  | 101     | 2430.32            |
+| HC-L2-05  | Access Points — 9                                      | 9       | 238.25             |
+| **Total** | ------------------------------------------------------ | **110** | **2668.57**        |
+| HC-L2-06  | Access Points — 9                                      | 9       | 256.25             |
+| **Total** | ------------------------------------------------------ | **9**   | **256.25**         |
+| HC-L2-07  | Room Outlets (R14: 25.79$m$ * 82 / R15: 39.90$m$ * 49) | 131     | 4069.88            |
+| HC-L2-07  | Access Points — 8                                      | 8       | 175.36             |
+| **Total** | ------------------------------------------------------ | **139** | **4245.24**        | 
+| HC-L2-08  | Room Outlets (R10: 23.94$m$ * 73 / R11: 4.78$m$ * 62)  | 135     | 2043.98            |
+| HC-L2-08  | Room Outlets (R12: 17.31$m$ * 54)                      | 54      | 934.74             |
+| HC-L2-08  | Access Points — 5                                      | 5       | 92.75              |
+| **Total** | ------------------------------------------------------ | **194** | **3071.47**        |
+| HC-L2-09  | Room Outlets (R15: 32.40$m$ * 37 / R16: 2.61$m$ * 66)  | 103     | 1371.06            |
+| HC-L2-09  | Room Outlets (R17: 22.37$m$ * 56)                      | 56      | 1252.72            |
+| HC-L2-09  | Access Points — 2                                      | 2       | 24.98              |
+| **Total** | ------------------------------------------------------ | **161** | **2648.76**        |
+| HC-L2-10  | Room Outlets (R18: 30.30$m$ * 82 / R19: 27.73$m$ * 74) | 156     | 4536.62            |
+| HC-L2-10  | Access Points — 7                                      | 7       | 163.04             |
+| **Total** | ------------------------------------------------------ | **163** | **4699.66**        |
