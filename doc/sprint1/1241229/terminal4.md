@@ -595,7 +595,7 @@ The IC will be placed within the Room 3, in this case, I considered X = 118 & Y 
 > 
 > **IC → HC:** The IC will connect to all HCs on their specific level, using the dropped ceiling.
 > 
-> **Room outlets:** $d_{HC \to room\_center} \times N_{outlets}$ — in order to simply calculations
+> **Room outlets:** $d_{HC \to room\_center} \times N_{outlets}$ — in order to simplify calculations
 >
 > **APs (room or open area):** $d_{HC \to AP\_position}$ - since each AP has a dedicated outlet
 > 
@@ -607,7 +607,7 @@ The IC will be placed within the Room 3, in this case, I considered X = 118 & Y 
 
 ### 5.1. MC → IC (Backbone)
 
-The MC and the IC on Level 0 will be co-located, since both will be on Room 4. We will consider 1$m$ of cable for this connection.
+The MC and the IC on Level 0 will be co-located, since both of them will be on Room 4. We will consider 1$m$ of cable for this connection.
 To connect the MC to the IC on Level 2, we will need to use the vertical passageway to go up 9$m$.
 
 **Total cable length for MC → IC connections: 10$m$**
@@ -666,9 +666,9 @@ Since there are 2 ICs, one on each floor, we only need
 #### Schematic Plan (Cable Pathways)
 > This schematic shows the passage of cables from Level 0
 > 
-> The cables are **not** in an accurate way (since they should be horizontal to the IC and others, not doing 90º turns), but it is drawn this way to help visualize better the cable pathways.
+> The cables are **not** drawn accurately (since they should be fully horizontal, which means, not doing 90º turns), but they are draw in this way to help visualize better the cable pathways.
 >
-> **Orange** cables represent a MC → IC connection, **Light Blue** cables represent a IC → HC connection and **Gray** cables represent a HC → Outlet connection.
+> **Orange** cables represent a MC → IC connection, **Light Blue** cables represent an IC → HC connection and **Gray** cables represent a HC → Outlet connection.
 > 
 > If a gray cable splits into more, it means that HC connects to all outlets within that room, not only the AP.
 > 
@@ -712,9 +712,9 @@ Since there are 2 ICs, one on each floor, we only need
 #### Schematic Plan (Cable Pathways)
 > This schematic shows the passage of cables from Level 2
 >
-> The cables are **not** in an accurate way (since they should be horizontal to the IC and others, not doing 90º turns), but it is drawn this way to help visualize better the cable pathways.
+>  The cables are **not** drawn accurately (since they should be fully horizontal, which means, not doing 90º turns),  but they are draw in this way to help visualize better the cable pathways.
 >
-> **Orange** cables represent a MC → IC connection, **Light Blue** cables represent a IC → HC connection and **Gray** cables represent a HC → Outlet connection.
+> **Orange** cables represent a MC → IC connection, **Light Blue** cables represent an IC → HC connection and **Gray** cables represent a HC → Outlet connection.
 >
 > If a gray cable splits into more, it means that HC connects to all outlets within that room, not only the AP.
 >
