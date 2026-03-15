@@ -577,7 +577,7 @@
 
 ---
 
-## 4. Cross Connections (ToDo)
+## 4. Cross Connections
 
 > Cables connecting an MC to an IC are limited to 1500 meters long. <br>
 > Cables connecting an IC and an HC are limited to 500 meters long. <br>
@@ -588,19 +588,7 @@
 
 ---
 
-### 4.1. Positioning of HCs
-
-HCs will be positioned in places where they can serve the most rooms/open areas as possible.
-
-One of the HCs on **both floors** will be placed in the bottom right corner. <br>
-This will guarantee that one HC will be available for all external wall outlets,
-if a CP is placed at the middle of each wall, as well as the AP outlets around the HC.
-
-All other HCs needed will be placed in a way that their usage is maximized, while reducing cable length, if possible.
-
----
-
-### 4.2. Level 1 - HCs & CPs positions & rooms/areas assigned
+### 4.1. Level 1 - HCs & CPs positions & rooms/areas assigned
 
 At this level we will need to place both an MC and an IC. <br>
 As the room dimensions are 200$m$ x 200$m$, the highest distance between two points of the room will be its diagonal.
@@ -623,13 +611,13 @@ To be able to connect all cables we will need some CPs. For that we will make th
 
 All the CPs are less than 90 meters away from the HC, as well as the furthest outlet connecting to them.
 
-| CP       | X ($m$) | Y ($m$) | Rooms served | Outlets | APs | APs served                                | Total   |
-|----------|---------|---------|--------------|---------|-----|-------------------------------------------|---------|
-| CP-L1-01 | 200     | 100     | None.        | 40      | 8   | AP6, AP31-34, AP51-53                     | **48**  |
-| CP-L1-02 | 100     | 200     | None.        | 40      | 10  | AP11-12, AP24-27, AP39, APP44, AP49, AP54 | **50**  |
-| CP-L1-03 | 83.3    | 10.6    | R1, R2, R3   | 178     | 5   | AP1-3, AP14, AP17                         | **183** |
-| CP-L1-04 | 121.1   | 10.6    | R4, R5       | 146     | 7   | AP4-5, AP30, AP35, AP40, AP45, AP50       | **153** |
-| CP-L1-05 | 78.8    | 103.92  | R7, R8       | 184     | 12  | AP7-10, AP14-15, AP17-18, AP20-23         | **196** |
+| CP       | X ($m$) | Y ($m$) | Rooms served | Outlets | APs | APs served                                      | Total   |
+|----------|---------|---------|--------------|---------|-----|-------------------------------------------------|---------|
+| CP-L1-01 | 200     | 100     | None.        | 40      | 8   | AP6, AP31-34, AP51-53                           | **48**  |
+| CP-L1-02 | 100     | 200     | None.        | 40      | 11  | AP11-12, AP20, AP24-27, AP39, APP44, AP49, AP54 | **51**  |
+| CP-L1-03 | 83.3    | 10.6    | R1, R2, R3   | 178     | 5   | AP1-3, AP14, AP17                               | **183** |
+| CP-L1-04 | 121.1   | 10.6    | R4, R5       | 146     | 7   | AP4-5, AP30, AP35, AP40, AP45, AP50             | **153** |
+| CP-L1-05 | 78.8    | 103.92  | R7, R8       | 184     | 9   | AP7-10, AP15, AP18, AP21-23                     | **193** |
 
 All the remaining APs will be connected directly to the HC, as they are in its range.
 
@@ -637,7 +625,111 @@ All the remaining APs will be connected directly to the HC, as they are in its r
 
 --- 
 
-### 4.3. Level 4 - HCs & CPs positions and rooms/areas assigned (ToDo)
+#### 4.1.1. Level 0 - Cable Distance Validation
+
+All distances will be measured on a straight-line from HC or CP to the room center or the AP position. <br>
+In order to the calculations being correct all distances must be below 100$m$.
+
+**CP-L1-01**
+
+All outlets present in the external wall are automatically below a distance of 100$m$,
+as the wall size is of 200$m$ total, and the CP is being placed in the middle.
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP6**    | (195.98; 5.08)   | 95.01$m$ |
+| **AP31**   | (194.71; 35.98)  | 64.24$m$ |
+| **AP32**   | (194.71; 78.73)  | 21.92$m$ |
+| **AP33**   | (194.71; 121.27) | 21.92$m$ |
+| **AP34**   | (194.71; 163.3)  | 64.24$m$ |
+| **AP51**   | (166.35; 64.13)  | 49.18$m$ |
+| **AP52**   | (166.35; 101.16) | 33.67$m$ |
+| **AP53**   | (166.35; 138.41) | 51.07$m$ |
+
+**CP-L1-02**
+
+All outlets present in the external wall are automatically below a distance of 100$m$,
+as the wall size is of 200$m$ total, and the CP is being placed in the middle.
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP11**   | (5.08; 194.07)   | 95.11$m$ |
+| **AP12**   | (194.71; 194.07) | 94.90$m$ |
+| **AP20**   | (5.08; 176.08)   | 97.89$m$ |
+| **AP24**   | (35.34; 194.07)  | 64.93$m$ |
+| **AP25**   | (79.15; 194.07)  | 21.68$m$ |
+| **AP26**   | (122.33; 194.07) | 23.10$m$ |
+| **AP27**   | (166.14; 194.07) | 66.41$m$ |
+| **AP39**   | (99.89; 175.24)  | 24.76$m$ |
+| **AP44**   | (122.12; 175.24) | 33.20$m$ |
+| **AP49**   | (144.34; 175.24) | 50.78$m$ |
+| **AP54**   | (166.35; 175.24) | 70.82$m$ |
+
+**CP-L1-03**
+
+| Connection | Coordinates    | Distance |
+|:-----------|:---------------|:---------|
+| **R1**     | (13.33; 6.35)  | 70.10$m$ |
+| **R2**     | (38.52; 6.35)  | 44.98$m$ |
+| **R3**     | (66.24; 6.35)  | 17.58$m$ |
+| **AP1**    | (13.33; 6.35)  | 70.10$m$ |
+| **AP2**    | (38.52; 6.35)  | 44.98$m$ |
+| **AP3**    | (66.24; 6.35)  | 17.58$m$ |
+| **AP14**   | (12.28; 35.98) | 75.42$m$ |
+| **AP17**   | (36.61; 35.98) | 53.14$m$ |
+
+**CP-L1-04**
+
+| Connection | Coordinates     | Distance |
+|:-----------|:----------------|:---------|
+| **R4**     | (102.65; 6.35)  | 18.93$m$ |
+| **R5**     | (138.84; 6.35)  | 18.24$m$ |
+| **AP4**    | (102.65; 6.35)  | 18.93$m$ |
+| **AP5**    | (138.84; 6.35)  | 18.24$m$ |
+| **AP30**   | (174.81; 5.08)  | 54.00$m$ |
+| **AP35**   | (99.89; 26.67)  | 26.61$m$ |
+| **AP40**   | (122.12; 26.67) | 16.10$m$ |
+| **AP45**   | (144.34; 26.67) | 28.25$m$ |
+| **AP50**   | (166.35; 26.67) | 48.02$m$ |
+
+**CP-L1-05**
+
+| Connection | Coordinates     | Distance |
+|:-----------|:----------------|:---------|
+| **R7**     | (63.49; 86.14)  | 23.46$m$ |
+| **R8**     | (63.49; 122.12) | 23.78$m$ |
+| **AP7**    | (63.49; 86.14)  | 23.46$m$ |
+| **AP8**    | (63.49; 122.12) | 23.78$m$ |
+| **AP9**    | (12.06; 153.86) | 83.36$m$ |
+| **AP10**   | (36.83; 153.86) | 65.23$m$ |
+| **AP15**   | (12.28; 78.94)  | 71.06$m$ |
+| **AP18**   | (36.61; 78.94)  | 49.03$m$ | 
+| **AP21**   | (30.05; 176.08) | 87.08$m$ |
+| **AP22**   | (63.7; 151.96)  | 50.36$m$ |
+| **AP23**   | (63.7; 166.77)  | 64.64$m$ |
+
+**Remaining APs - Directly to HC**
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP13**   | (63.49; 103.92)  | 36.72$m$ |
+| **AP16**   | (12.28; 121.69)  | 90.36$m$ |
+| **AP19**   | (36.61; 121.69)  | 67.00$m$ |
+| **AP28**   | (63.7; 34.92)    | 74.52$m$ |
+| **AP29**   | (63.7; 56.08)    | 56.98$m$ |
+| **AP36**   | (99.89; 64.13)   | 35.87$m$ |
+| **AP37**   | (99.89; 101.16)  | 1.17$m$  |
+| **AP38**   | (99.89; 138.41)  | 38.41$m$ |
+| **AP41**   | (122.12; 64.13)  | 42.14$m$ |
+| **AP42**   | (122.12; 101.16) | 22.15$m$ |
+| **AP43**   | (122.12; 138.41) | 44.32$m$ |
+| **AP46**   | (144.34; 64.13)  | 57.03$m$ |
+| **AP47**   | (144.34; 101.16) | 44.36$m$ |
+| **AP48**   | (144.34; 138.41) | 58.66$m$ |
+
+---
+
+### 4.2. Level 4 - HCs & CPs positions and rooms/areas assigned
 
 At this level we will only need to place an IC. <br>
 As the room dimensions are 200$m$ x 200$m$, the highest distance between two points of the room will be its diagonal.
@@ -649,28 +741,143 @@ With this room dimensions we also know that a **singular HC** is necessary, if p
 
 To be able to connect all cables we will need some CPs. For that we will make the following distribution:
 
-- **CP-L1-01** : Placed exactly in the middle of the right side external wall
-- **CP-L1-02** : Placed exactly in the middle of the bottom side external wall
-- **CP-L1-03** : Placed at the right bottom corner of room 4.
-- **CP-L1-04** : Placed at the left bottom corner of room 6.
-- **CP-L1-05** : Placed at the right intersection of rooms 5 and 9.
-- **CP-L1-06** : Placed between rooms 12 and 13.
-- **CP-L1-07** : Placed at the right bottom corner of room 10.
+- **CP-L4-01** : Placed exactly in the middle of the right side external wall
+- **CP-L4-02** : Placed exactly in the middle of the bottom side external wall
+- **CP-L4-03** : Placed at the right bottom corner of room 4.
+- **CP-L4-04** : Placed at the left bottom corner of room 6.
+- **CP-L4-05** : Placed at the right intersection of rooms 5 and 9.
+- **CP-L4-06** : Placed between rooms 12 and 13.
+- **CP-L4-07** : Placed at the right bottom corner of room 10.
 
 All the CPs are less than 90 meters away from the HC, as well as the furthest outlet connecting to them.
 
-| CP       | X ($m$) | Y ($m$) | Rooms served       | Outlets | APs | APs served                         | Total   |
-|----------|---------|---------|--------------------|---------|-----|------------------------------------|---------|
-| CP-L1-01 | 200     | 100     | None.              | 40      | 7   | AP30-31, AP48-52                   | **47**  |
-| CP-L1-02 | 100     | 200     | None.              | 40      | 8   | AP33, AP37, AP40-42, AP45-47       | **48**  |
-| CP-L1-03 | 85.75   | 11.4    | R1, R2, R3         | 197     | 3   | AP1-3                              | **200** |
-| CP-L1-04 | 77.67   | 13.3    | R6, R7             | 189     | 2   | AP6-7                              | **191** |
-| CP-L1-05 | 99.05   | 13.3    | R4, R5, R9         | 153     | 3   | AP4-5, AP9                         | **156** |
-| CP-L1-06 | 99.05   | 70.45   | R11, R12, R13, R14 | 189     | 11  | AP11-14, AP32-33, AP35-36, AP38-39 | **200** |
-| CP-L1-07 | 44.5    | 50.5    | R10                | 82      | 11  | AP10, AP20-29                      | **93**  |
+| CP       | X ($m$) | Y ($m$) | Rooms served       | Outlets | APs | APs served                            | Total   |
+|----------|---------|---------|--------------------|---------|-----|---------------------------------------|---------|
+| CP-L4-01 | 200     | 100     | None.              | 40      | 13  | AP30-31, AP34, AP37, AP40-42, AP47-52 | **53**  |
+| CP-L4-02 | 100     | 200     | None.              | 40      | 5   | AP17-18, AP43, AP45-46                | **45**  | 
+| CP-L4-03 | 85.75   | 11.4    | R1, R2, R3         | 153     | 3   | AP1-3                                 | **156** |
+| CP-L4-04 | 77.67   | 13.3    | R6, R7             | 189     | 2   | AP6-7                                 | **191** |
+| CP-L4-05 | 99.05   | 13.3    | R4, R5, R9         | 197     | 3   | AP4-5, AP9                            | **200** |
+| CP-L4-06 | 99.05   | 70.45   | R11, R12, R13, R14 | 189     | 11  | AP11-14, AP32-33, AP35-36, AP38-39    | **200** |
+| CP-L4-07 | 44.5    | 50.5    | R10                | 82      | 11  | AP10, AP20-29                         | **93**  |
 
 All the remaining APs will be connected directly to the HC, as they are in its range.
 
 **Total: 1 HC + 7 CPs**
+
+---
+
+#### 4.2.1. Level 4 - Cable Distance Validation
+
+All distances will be measured on a straight-line from HC or CP to the room center or the AP position. <br>
+In order to the calculations being correct all distances must be below 100$m$.
+
+**CP-L4-01**
+
+All outlets present in the external wall are automatically below a distance of 100$m$,
+as the wall size is of 200$m$ total, and the CP is being placed in the middle.
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP30**   | (35.65; 152.83)  | 79.79$m$ |
+| **AP31**   | (66.96; 152.83)  | 57.59$m$ |
+| **AP34**   | (183.7; 32.39)   | 69.55$m$ |
+| **AP37**   | (183.7; 59.57)   | 43.59$m$ |
+| **AP40**   | (183.7; 86.52)   | 21.15$m$ | 
+| **AP41**   | (163.26; 116.74) | 40.37$m$ | 
+| **AP42**   | (178.04; 116.74) | 27.61$m$ |
+| **AP47**   | (188.48; 150.0)  | 51.31$m$ |
+| **AP48**   | (40.43; 186.52)  | 61.08$m$ |
+| **AP49**   | (75.22; 186.52)  | 28.21$m$ |
+| **AP50**   | (110.0; 186.52)  | 16.78$m$ |
+| **AP51**   | (144.78; 186.52) | 46.76$m$ |
+| **AP52**   | (179.57; 186.52) | 80.70$m$ |
+
+**CP-L4-02**
+
+All outlets present in the external wall are automatically below a distance of 100$m$,
+as the wall size is of 200$m$ total, and the CP is being placed in the middle.
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP17**   | (5.0; 194.78)    | 95.14$m$ |
+| **AP18**   | (195.43; 194.78) | 95.57$m$ |
+| **AP43**   | (96.3; 150.0)    | 50.14$m$ |
+| **AP45**   | (142.39; 150.0)  | 65.55$m$ |
+| **AP46**   | (165.43; 150.0)  | 82.35$m$ |
+
+**CP-L4-03**
+
+| Connection | Coordinates   | Distance |
+|:-----------|:--------------|:---------|
+| **R1**     | (10.87; 5.22) | 75.13$m$ |
+| **R2**     | (33.48; 5.22) | 52.63$m$ |
+| **R3**     | (54.13; 5.22) | 32.22$m$ |
+| **AP1**    | (10.87; 5.22) | 75.13$m$ |
+| **AP2**    | (33.48; 5.22) | 52.63$m$ |
+| **AP3**    | (54.13; 5.22) | 32.22$m$ |
+
+**CP-L4-04**
+
+| Connection | Coordinates    | Distance |
+|:-----------|:---------------|:---------|
+| **R6**     | (139.78; 6.74) | 41.25$m$ |
+| **R7**     | (174.78; 6.74) | 76.01$m$ |
+| **AP6**    | (139.78; 6.74) | $m$      |
+| **AP7**    | (174.78; 6.74) | $m$      |
+
+**CP-L4-05**
+
+| Connection | Coordinates    | Distance |
+|:-----------|:---------------|:---------|
+| **R4**     | (73.7; 5.22)   | 26.61$m$ |
+| **R5**     | (103.26; 6.74) | 7.79$m$  |
+| **R9**     | (90.65; 23.48) | 13.20$m$ |
+| **AP4**    | (73.7; 5.22)   | $m$      |
+| **AP5**    | (103.26; 6.74) | $m$      |
+| **AP9**    | (90.65; 23.48) | $m$      |
+
+**CP-L4-06** 
+
+| Connection | Coordinates     | Distance |
+|:-----------|:----------------|:---------|
+| **R11**    | (90.65; 42.83)  | 28.87$m$ |
+| **R12**    | (90.65; 62.17)  | 11.79$m$ |
+| **R13**    | (90.65; 82.0)   | 14.28$m$ |
+| **R14**    | (90.65; 98.7)   | 29.47$m$ |
+| **AP11**   | (90.65; 42.83)  | $m$      |
+| **AP12**   | (90.65; 62.17)  | $m$      |
+| **AP13**   | (90.65; 82.0)   | $m$      |
+| **AP14**   | (90.65; 98.7)   | $m$      |
+| **AP32**   | (115.22; 32.39) | 41.35$m$ |
+| **AP33**   | (149.57; 32.39) | 63.25$m$ |
+| **AP35**   | (115.22; 59.57) | 19.49$m$ |
+| **AP36**   | (149.57; 59.57) | 51.68$m$ |
+| **AP38**   | (115.22; 86.52) | 22.80$m$ |
+| **AP39**   | (149.57; 86.52) | 53.01$m$ |
+
+**CP-L4-07** 
+
+| Connection | Coordinates    | Distance |
+|:-----------|:---------------|:---------|
+| **R10**    | (33.26; 42.83) | 13.61$m$ |
+| **AP10**   | (33.26; 42.83) | $m$      |
+| **AP20**   | (22.17; 23.26) | 35.22$m$ |
+| **AP21**   | (61.09; 23.26) | 31.89$m$ |
+| **AP22**   | (9.13; 73.91)  | 42.42$m$ |
+| **AP23**   | (9.13; 109.57) | 68.85$m$ |
+| **AP24**   | (36.65; 69.57) | 20.62$m$ |
+| **AP25**   | (66.96; 69.57) | 29.46$m$ |
+| **AP26**   | (35.65; 97.39) | 47.72$m$ |
+| **AP27**   | (66.96; 97.39) | 52.00$m$ |
+| **AP28**   | (35.65; 125.0) | 75.02$m$ |
+| **AP29**   | (66.96; 125.0) | 77.81$m$ |
+
+**Remaining APs - Directly to HC** 
+
+| Connection | Coordinates      | Distance |
+|:-----------|:-----------------|:---------|
+| **AP19**   | (107.83; 116.96) | 18.68$m$ |
+| **AP44**   | (119.35; 150.0)  | 53.61$m$ |
 
 ---
