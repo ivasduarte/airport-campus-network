@@ -5,23 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rcomp-25-26-DI-G2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rcomp-25-26-DI-G2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241166/terminal2.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241166/terminal2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs-SemArea.svg" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs-SemArea.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-APs.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-StandardOutlets.svg" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/assets/Terminal5_Level0-StandardOutlets.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241176/terminal5.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241176/terminal5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241229/terminal4.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/1241234/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/1241234/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint1/planning.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/planning.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/sprint1/review.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint1/review.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
