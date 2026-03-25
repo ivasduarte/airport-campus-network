@@ -8,5 +8,5 @@
 
 ## Sprints
 - [Sprint 1](doc/sprint1)
-- Sprint 2
+- [Sprint 2](doc/sprint2)
 - Sprint 3
