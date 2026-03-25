@@ -25,12 +25,30 @@ During the team's planning meeting, we agreed on the following technical specifi
 terminals:
 
 * **Packet Tracer Version:** All team members must use **Cisco Packet Tracer version 9.0.0.810**.
+
 * **VLANIDs and corresponding VLAN names:** 
-* **Native VLAN:**
-* **Default VLAN:**
-* **VTP Domain name:**
+  * The VLANIDs range assigned to our group was: **797-817**.  
+  * As our team is composed by four team members, we decidedd to make the following distribution:
+    * **Campus Backbone :** VLANID = 797
+    * **Switches DMZ :** VLANID = 798
+    * **1241166 :** VLANID = 799-802
+    * **1241176 :** VLANID = 803-806
+    * **1241229 :** VLANID = 807-810
+    * **1241234 :** VLANID = 811-814
+    * _The VLANIDs 815-817 are free to use, at the moment of the planning meeting._
+  * For the name of the VLANs we decided to follow the rules below:
+    * T$x$VLAN$ID$
+      * $x$ → Terminal where the VLAN will be used.
+      * $ID$ → ID assigned to the VLAN. 
+
+* **Default VLAN:** For the default VLAN we decided to keep the VLANID = 1.
+
+* **VTP Domain name:** rc2526dig2
+
 * **IPv4 network addresses for Campus Backbone and Switches DMZ network:**
+
 * **IPv4 network addresses for each team member:**
+
 * **Unique range of IPv4 node addresses for each team member, within the Switches DMZ network:**
 
 ---
