@@ -46,10 +46,14 @@ terminals:
 * **VTP Domain name:** rc2526dig2
 
 * **IPv4 network addresses for Campus Backbone and Switches DMZ network:**
+  * **Campus Backbone :** 10.75.195.0 /24
+  * **Switches DMZ Network :** 10.75.194.0 /23
 
 * **IPv4 network addresses for each team member:**
-
-* **Unique range of IPv4 node addresses for each team member, within the Switches DMZ network:**
+  * **1241166 :** 10.75.160.0 /20
+  * **1241176 :** 10.75.128.0 /19
+  * **1241229 :** 10.75.192.0 /20
+  * **1241234 :** 10.75.176.0 /20
 
 ---
 
