@@ -1,0 +1,99 @@
+# RCOMP 2025-2026: Project 1 Sprint 2 Member 1221176 File
+=====
+
+### Contents
+
+1. [Network Base Data](#1-network-base-data)
+2. [Subnetting (VLSM)](#2-subnetting-vlsm)
+    - [Wi-Fi VLAN](#21-wi-fi-vlan-t5vlan803)
+    - [VLAN User Outlets](#22-vlan-user-oulets-t5vlan804)
+    - [VLAN VoIP](#23-vlan-voip-t5vlan805)
+    - [DMZ VLAN Servers](#24-dmz-vlan-servers-t5vlan806)
+3. [IP Address Assignment](#3-ip-address-assignment-end-devices-and-interfaces)
+4. [Static Routing Table](#4-static-routing-table)
+
+---
+
+## 1. Network Base Data
+
+According to the team planning meeting, the following parameters were defined for Terminal 5:
+* **IPv4 Block Assigned to Terminal 5:** 10.75.128.0/19
+* **VLAN IDs Assigned:** 803 to 806
+* **Campus Backbone Network:** 10.75.195.0/24
+* **DMZ Switch Network:** 10.75.194.0/23
+
+---
+
+## 2. Subnetting (VLSM)
+
+To accomodate the node requirements of Terminal 5, the block ´10.75.128.0/19` was subdivided from the larget network to the smallest:
+
+### 2.1. Wi-Fi VLAN (T5VLAN803)
+* **Requirement:** 4000 nodes
+* **Required Size:** 4094 usable IPs → /20 mask (255.255.240.0)
+* **Network Address:** 10.75.128.0/20
+* **First Usable IP (Gateway):** 10.75.128.1
+* **Last Usable IP:** 10.75.143.254
+* **Broadcast Address:** 10.75.143.255
+
+
+### 2.2. VLAN User Oulets (T5VLAN804)
+* **Requirement:** 1900 nodes
+* **Required Size:** 2046 usable IPs → /21 mask (255.255.248.0)
+* **Network Address:** 10.75.144.0/21
+* **First Usable IP (Gateway):** 10.75.144.1
+* **Last Usable IP:** 10.75.151.254
+* **Broadcast Address:** 10.75.151.255
+
+
+### 2.3. VLAN VoIP (T5VLAN805)
+* **Requirement:** 500 nodes
+* **Required Size:** 510 usable IPs → /23 mask (255.255.245.0)
+* **Network Address:** 10.75.152.0/23
+* **First Usable IP (Gateway):** 10.75.152.1
+* **Last Usable IP:** 10.75.153.254
+* **Broadcast Address:** 10.75.153.255
+
+
+### 2.4. DMZ VLAN Servers (T5VLAN806)
+* **Requirement:** 200 nodes
+* **Required Size:** 254 usable IPs → /24 mask (255.255.255.0)
+* **Network Address:** 10.75.154.0/24
+* **First Usable IP (Gateway):** 10.75.154.1
+* **Last Usable IP:** 10.75.154.254
+* **Broadcast Address:** 10.75.154.255
+
+---
+
+## 3. IP Address Assignment (End Devices and Interfaces)
+
+To ensure that the networks are functional in the Packet Tracer simulation, the following IPs were statically configured 
+on the test devices:
+
+|         Device         |    VLAN     |   IP Address    |  Subnet Mask  |    Default Gateway     |
+|:----------------------:|:-----------:|:---------------:|:-------------:|:----------------------:|
+|   Wireless Notebook    | 803 (Wi-Fi) |  10.75.128.10   | 255.255.240.0 |      10.75.128.1       |
+|       Desktop PC       | 804 (User)  |  10.75.144.10   | 255.255.248.0 |      10.75.144.1       |
+|     IP Phone 7960      | 805 (VoIP)  | DHCP (Sprint 3) |       -       |           -            |
+|         Server         |  806 (DMZ)  |  10.75.154.10   | 255.255.255.0 |      10.75.154.1       |
+| PC Management Switches | 798 (SwDMZ) |                 | 255.255.254.0 | N/A (Isolated Network) |
+
+
+*Note: The management IP of the switches and the management PC must be agreed upon within the 10.75.194.0/23 block
+shared by the team.*
+
+---
+
+## 4. Static Routing Table
+
+Terminal 5's router (model 2811) is connected to the Campus Backbone via IP `10.75.195.X` 
+*(replace X with exact IP agreed upon with the team for this router)*
+
+To reach the networks of the other terminals and the Internet, the following static routes were configured:
+
+| Destination Network (IP Block) |     Mask      | Next-Hop<br/>(IP of the Destination Router on the Backbone) |             Description              |
+|:------------------------------:|:-------------:|:-----------------------------------------------------------:|:------------------------------------:|
+|          10.75.160.0           | 255.255.240.0 |                      10.75.195.(IP T2)                      |         Route to Terminal 2          |
+|          10.75.192.0           | 255.255.240.0 |                      10.75.195.(IP T4)                      |         Route to Terminal 4          |
+|          10.75.176.0           | 255.255.240.0 |                      10.75.195.(IP T3)                      |         Route to Terminal 3          |
+|            0.0.0.0             |    0.0.0.0    |                      10.75.195.(IP T2)                      | Standard Route for Internet (via T2) |

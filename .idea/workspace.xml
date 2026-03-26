@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/planning.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/planning.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +18,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="51" />
+    <option name="cachedIndexableFilesCount" value="54" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -34,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Departamento-de-Engenharia-Informatica/rcomp-25-26-DI-G2.git&quot;,
-    &quot;accountId&quot;: &quot;d6bb6f21-5810-4877-a27b-9f3ab6ffb6fa&quot;
+    &quot;accountId&quot;: &quot;9d676d24-0e14-4941-8b61-916c1e986576&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -81,6 +80,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ivadu\OneDrive\Documents\GitHub\rcomp-25-26-DI-G2\doc\sprint2\1241176\assets" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,6 +142,13 @@
       <workItem from="1773950800496" duration="81000" />
       <workItem from="1773951464833" duration="13549000" />
       <workItem from="1774004589538" duration="2425000" />
+      <workItem from="1774535600116" duration="201000" />
+      <workItem from="1774537917648" duration="5000" />
+      <workItem from="1774540021104" duration="1569000" />
+      <workItem from="1774541645735" duration="2152000" />
+      <workItem from="1774548885679" duration="2000" />
+      <workItem from="1774548985848" duration="911000" />
+      <workItem from="1774549912679" duration="2958000" />
     </task>
     <servers />
   </component>
