@@ -28,7 +28,7 @@ terminals:
 
 * **VLANIDs and corresponding VLAN names:** 
   * The VLANIDs range assigned to our group was: **797-817**.  
-  * As our team is composed by four team members, we decidedd to make the following distribution:
+  * As our team is composed by four team members, we decided to make the following distribution:
     * **Campus Backbone :** VLANID = 797
     * **Switches DMZ :** VLANID = 798
     * **1241166 :** VLANID = 799-802
@@ -46,8 +46,8 @@ terminals:
 * **VTP Domain name:** rc2526dig2
 
 * **IPv4 network addresses for Campus Backbone and Switches DMZ network:**
-  * **Campus Backbone :** 10.75.195.0 /24
-  * **Switches DMZ Network :** 10.75.194.0 /23
+  * **Campus Backbone :** 10.75.208.0 /24
+  * **Switches DMZ Network :** 10.75.210.0 /23
 
 * **IPv4 network addresses for each team member:**
   * **1241166 :** 10.75.160.0 /20
