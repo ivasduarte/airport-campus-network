@@ -4,10 +4,6 @@
 
 ## IPv4 Networking
 
-**Terminal defined IPv4 addresses:** 
-
----
-
 ### Terminal required nodes
 
 **User outlets:** 1000 nodes <br> 
