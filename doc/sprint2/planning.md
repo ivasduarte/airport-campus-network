@@ -24,7 +24,7 @@
 During the team's planning meeting, we agreed on the following technical specifications to ensure consistency across all
 terminals:
 
-* **Packet Tracer Version:** All team members must use **Cisco Packet Tracer version 9.0.0.810**.
+* **Packet Tracer Version:** All team members must use **Cisco Packet Tracer version 9.0.0.0810**.
 
 * **VLANIDs and corresponding VLAN names:** 
   * The VLANIDs range assigned to our group was: **797-817**.  
