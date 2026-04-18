@@ -1,0 +1,103 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname T3-Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10173M2Y-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.797
+ encapsulation dot1Q 797
+ ip address 10.75.208.3 255.255.255.0
+!
+interface FastEthernet0/0.811
+ encapsulation dot1Q 811
+ ip address 10.75.184.1 255.255.252.0
+!
+interface FastEthernet0/0.812
+ encapsulation dot1Q 812
+ ip address 10.75.176.1 255.255.248.0
+!
+interface FastEthernet0/0.813
+ encapsulation dot1Q 813
+ ip address 10.75.188.1 255.255.254.0
+!
+interface FastEthernet0/0.814
+ encapsulation dot1Q 814
+ ip address 10.75.190.1 255.255.255.0
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+!
+ip classless
+ip route 10.75.160.0 255.255.240.0 10.75.208.2 
+ip route 10.75.128.0 255.255.224.0 10.75.208.5 
+ip route 10.75.192.0 255.255.240.0 10.75.208.4 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
