@@ -4,8 +4,8 @@
 
 1. [Network Base Data](#1-network-base-data)
 2. [Subnetting (VLSM)](#2-subnetting-vlsm)
-    - [VLAN User Outlets](#21-vlan-user-outlets-t4vlan807)
-    - [Wi-Fi VLAN](#22-wi-fi-vlan-t4vlan808)
+    - [Wi-Fi VLAN](#21-wi-fi-vlan-t4vlan808)
+    - [VLAN User Outlets](#22-vlan-user-outlets-t4vlan807)
     - [VLAN VoIP](#23-vlan-voip-t4vlan809)
     - [DMZ VLAN Servers](#24-dmz-vlan-servers-t4vlan810)
 3. [IP Address Assignment](#3-ip-address-assignment-end-devices-and-interfaces)
@@ -26,21 +26,21 @@ According to the team planning meeting, the following parameters were defined fo
 
 To accommodate the node requirements of Terminal 4, the block `10.75.192.0/20` was subdivided from the largest network to the smallest:
 
-### 2.1. VLAN User Outlets (T4VLAN807)
-* **Requirement:** 800 nodes
-* **Required Size:** 1022 usable IPs → /22 mask (255.255.252.0)
-* **Network Address:** 10.75.200.0/22
-* **First Usable IP (Gateway):** 10.75.200.1
-* **Last Usable IP:** 10.75.203.254
-* **Broadcast Address:** 10.75.203.255
-
-### 2.2. Wi-Fi VLAN (T4VLAN808)
+### 2.1. Wi-Fi VLAN (T4VLAN808)
 * **Requirement:** 1800 nodes
 * **Required Size:** 2046 usable IPs → /21 mask (255.255.248.0)
 * **Network Address:** 10.75.192.0/21
 * **First Usable IP (Gateway):** 10.75.192.1
 * **Last Usable IP:** 10.75.199.254
 * **Broadcast Address:** 10.75.199.255
+
+### 2.2. VLAN User Outlets (T4VLAN807)
+* **Requirement:** 800 nodes
+* **Required Size:** 1022 usable IPs → /22 mask (255.255.252.0)
+* **Network Address:** 10.75.200.0/22
+* **First Usable IP (Gateway):** 10.75.200.1
+* **Last Usable IP:** 10.75.203.254
+* **Broadcast Address:** 10.75.203.255
 
 ### 2.3. VLAN VoIP (T4VLAN809)
 * **Requirement:** 400 nodes

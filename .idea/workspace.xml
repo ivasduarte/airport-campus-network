@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa44cbe4-edbe-45ef-8ebf-cb11f7be04d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/Terminal4.pkt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/Terminal4.pkt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-HC-L0_running-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-HC-L0_running-config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-HC-L2_running-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-HC-L2_running-config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-IC-L0_running-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-IC-L0_running-config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-IC-L2_running-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-IC-L2_running-config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-MC_running-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/configs/T4-MC_running-config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sprint2/1241229/addressing_routing_t4.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sprint2/1241229/addressing_routing_t4.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +155,10 @@
       <workItem from="1776081207189" duration="808000" />
       <workItem from="1776260533722" duration="627000" />
       <workItem from="1776447075013" duration="1095000" />
+      <workItem from="1776451105390" duration="68000" />
+      <workItem from="1776520261278" duration="72000" />
+      <workItem from="1776520369853" duration="241000" />
+      <workItem from="1776520626665" duration="14000" />
     </task>
     <servers />
   </component>
