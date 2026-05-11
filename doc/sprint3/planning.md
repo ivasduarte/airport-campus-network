@@ -1,6 +1,10 @@
-RCOMP 2025-2026 Project 1 - Sprint 3 planning
-===========================================
+# RCOMP 2025-2026 Project 1 - Sprint 3 planning
+
+---
+
 ### Sprint master: 1241229 ###
+
+---
 
 # 1. Sprint's backlog #
 
@@ -8,6 +12,8 @@ RCOMP 2025-2026 Project 1 - Sprint 3 planning
 * T.3.2 - Update the Terminal3.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for Terminal 3. Final integration of each member's Packet Tracer simulation into a single simulation (campus.pkt).
 * T.3.3 - Update the Terminal5.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for Terminal 5.
 * T.3.4 - Update the Terminal4.pkt layer three Packet Tracer simulation from the previous sprint, to include the described features in this sprint for Terminal 4.
+
+---
 
 # 2. Technical decisions and coordination #
 
@@ -50,6 +56,8 @@ The DNS name server is named `ns` within its domain.
 | Terminal 3 | `terminal-3.rcomp-25-26-di-g2` |   10.75.190.2   |
 | Terminal 4 | `terminal-4.rcomp-25-26-di-g2` |   10.75.206.2   |
 | Terminal 5 | `terminal-5.rcomp-25-26-di-g2` |  10.75.154.10   |
+
+---
 
 # 3. Subtasks assignment #
 
