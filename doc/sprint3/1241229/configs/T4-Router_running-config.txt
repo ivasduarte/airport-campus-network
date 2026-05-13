@@ -112,6 +112,42 @@ ip flow-export version 9
 !
 !
 !
+dial-peer voice 2 voip
+ destination-pattern 2...
+ session target ipv4:10.75.208.2
+!
+dial-peer voice 3 voip
+ destination-pattern 3...
+ session target ipv4:10.75.208.3
+!
+dial-peer voice 5 voip
+ destination-pattern 5...
+ session target ipv4:10.75.208.5
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.75.204.1 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 4001
+!
+ephone-dn 2
+ number 4002
+!
+ephone 1
+ device-security-mode none
+ mac-address 00E0.8F06.1B85
+ type 7960
+ button 1:2
+!
+ephone 2
+ device-security-mode none
+ mac-address 00E0.F7E0.B3C2
+ type 7960
+ button 1:1
+!
 line con 0
 !
 line aux 0
