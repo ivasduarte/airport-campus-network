@@ -15,6 +15,10 @@ ptp clock transparent domain 0 profile default
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
+interface GigabitEthernet3/1
+ switchport access vlan 797
+ switchport mode access
+!
 interface GigabitEthernet4/1
 !
 interface GigabitEthernet5/1

@@ -65,22 +65,27 @@ interface FastEthernet0/0
 interface FastEthernet0/0.797
  encapsulation dot1Q 797
  ip address 10.75.208.4 255.255.255.0
+ ip nat outside
 !
 interface FastEthernet0/0.807
  encapsulation dot1Q 807
  ip address 10.75.200.1 255.255.252.0
+ ip nat inside
 !
 interface FastEthernet0/0.808
  encapsulation dot1Q 808
  ip address 10.75.192.1 255.255.248.0
+ ip nat inside
 !
 interface FastEthernet0/0.809
  encapsulation dot1Q 809
  ip address 10.75.204.1 255.255.254.0
+ ip nat inside
 !
 interface FastEthernet0/0.810
  encapsulation dot1Q 810
  ip address 10.75.206.1 255.255.255.128
+ ip nat inside
 !
 interface FastEthernet0/1
  no ip address
@@ -102,6 +107,8 @@ router ospf 1
 !
 router rip
 !
+ip nat inside source static tcp 10.75.206.2 80 10.75.208.4 80 
+ip nat inside source static tcp 10.75.206.2 443 10.75.208.4 443 
 ip classless
 !
 ip flow-export version 9
