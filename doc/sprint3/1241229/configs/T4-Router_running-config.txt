@@ -36,7 +36,7 @@ no ipv6 cef
 !
 !
 !
-license udi pid CISCO2811/K9 sn FTX1017084O-
+license udi pid CISCO2811/K9 sn FTX10174MZZ-
 !
 !
 !
@@ -66,6 +66,7 @@ interface FastEthernet0/0.797
  encapsulation dot1Q 797
  ip address 10.75.208.4 255.255.255.0
  ip nat outside
+ ip access-group BACKBONE_IN in
 !
 interface FastEthernet0/0.807
  encapsulation dot1Q 807
@@ -86,6 +87,7 @@ interface FastEthernet0/0.810
  encapsulation dot1Q 810
  ip address 10.75.206.1 255.255.255.128
  ip nat inside
+ ip access-group DMZ_OUT out
 !
 interface FastEthernet0/1
  no ip address
@@ -114,6 +116,44 @@ ip classless
 ip flow-export version 9
 !
 !
+ip access-list extended BACKBONE_IN
+ deny ip 10.75.192.0 0.0.7.255 any
+ deny ip 10.75.200.0 0.0.3.255 any
+ deny ip 10.75.204.0 0.0.1.255 any
+ deny ip 10.75.206.0 0.0.0.127 any
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit tcp any host 10.75.208.4 eq www
+ permit tcp any host 10.75.208.4 eq 443
+ permit ospf any any
+ permit ip any any
+ip access-list extended DMZ_OUT
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit udp any host 10.75.206.2 eq domain
+ permit tcp any host 10.75.206.2 eq www
+ permit tcp any host 10.75.206.2 eq 443
+ permit tcp any host 10.75.206.3 eq www
+ permit tcp any host 10.75.206.3 eq 443
+ permit ip 10.75.206.0 0.0.0.127 any
+ deny ip any 10.75.206.0 0.0.0.127
+ permit ip any any
+ip access-list extended ROUTER_IN
+ permit udp any host 255.255.255.255 eq bootps
+ permit udp any any eq bootps
+ permit udp any host 10.75.204.1 eq tftp
+ permit tcp any host 10.75.204.1 eq 2000
+ permit ospf any any
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit tcp any host 10.75.208.4 eq www
+ permit tcp any host 10.75.208.4 eq 443
+ deny ip any host 10.75.208.4
+ deny ip any host 10.75.200.1
+ deny ip any host 10.75.192.1
+ deny ip any host 10.75.204.1
+ deny ip any host 10.75.206.1
+ permit ip any any
 !
 !
 !
