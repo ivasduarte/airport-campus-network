@@ -1,0 +1,254 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 10.75.176.1 10.75.176.20
+ip dhcp excluded-address 10.75.184.1 10.75.184.20
+ip dhcp excluded-address 10.75.188.1 10.75.188.20
+!
+ip dhcp pool T3-WIFI
+ network 10.75.176.0 255.255.248.0
+ default-router 10.75.176.1
+ dns-server 10.75.190.2
+ domain-name terminal-3.rcomp-25-26-di-g2
+ip dhcp pool T3-USERS
+ network 10.75.184.0 255.255.252.0
+ default-router 10.75.184.1
+ dns-server 10.75.190.2
+ domain-name terminal-3.rcomp-25-26-di-g2
+ip dhcp pool T3-VOIP
+ network 10.75.188.0 255.255.254.0
+ default-router 10.75.188.1
+ option 150 ip 10.75.188.1
+ dns-server 10.75.190.2
+ domain-name terminal-3.rcomp-25-26-di-g2
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10173M2Y-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.797
+ encapsulation dot1Q 797
+ ip address 10.75.208.3 255.255.255.0
+ ip nat outside
+ ip access-group T3-BACKBONE-IN in
+!
+interface FastEthernet0/0.811
+ encapsulation dot1Q 811
+ ip address 10.75.184.1 255.255.252.0
+ ip access-group T3-USERS-IN in
+!
+interface FastEthernet0/0.812
+ encapsulation dot1Q 812
+ ip address 10.75.176.1 255.255.248.0
+ ip access-group T3-WIFI-IN in
+!
+interface FastEthernet0/0.813
+ encapsulation dot1Q 813
+ ip address 10.75.188.1 255.255.254.0
+ ip access-group T3-VOIP-IN in
+!
+interface FastEthernet0/0.814
+ encapsulation dot1Q 814
+ ip address 10.75.190.1 255.255.255.0
+ ip nat inside
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ router-id 3.3.3.3
+ log-adjacency-changes
+ passive-interface default
+ no passive-interface FastEthernet0/0.797
+ network 10.75.208.0 0.0.0.255 area 0
+ network 10.75.176.0 0.0.7.255 area 3
+ network 10.75.184.0 0.0.3.255 area 3
+ network 10.75.188.0 0.0.1.255 area 3
+ network 10.75.190.0 0.0.0.255 area 3
+!
+ip nat inside source static tcp 10.75.190.2 80 10.75.208.3 80 
+ip nat inside source static tcp 10.75.190.2 443 10.75.208.3 443 
+ip classless
+!
+ip flow-export version 9
+!
+!
+ip access-list extended T3-BACKBONE-IN
+ remark Block spoofed traffic pretending to be from Terminal 3 networks
+ deny ip 10.75.176.0 0.0.15.255 any
+ deny ip 10.75.190.0 0.0.0.255 any
+ remark Allow OSPF between routers
+ permit ospf any any
+ remark Allow ICMP echo and echo-reply
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ remark Allow DNS to T3 DNS server
+ permit udp any host 10.75.190.2 eq domain
+ permit tcp any host 10.75.190.2 eq domain
+ remark Allow HTTP/HTTPS to DMZ servers
+ permit tcp any host 10.75.190.2 eq www
+ permit tcp any host 10.75.190.2 eq 443
+ permit tcp any host 10.75.190.3 eq www
+ permit tcp any host 10.75.190.3 eq 443
+ remark Allow NAT HTTP/HTTPS on router backbone ip
+ permit tcp any host 10.75.208.3 eq www
+ permit tcp any host 10.75.208.3 eq 443
+ remark Allow VoIP between terminal routers
+ permit ip host 10.75.208.2 host 10.75.208.3
+ permit ip host 10.75.208.4 host 10.75.208.3
+ permit ip host 10.75.208.5 host 10.75.208.3
+ remark Block other traffic to DMZ
+ deny ip any 10.75.190.0 0.0.0.255
+ remark Block other traffic directed to the router itself
+ deny ip any host 10.75.208.3
+ remark Allow remaining transit traffic
+ permit ip any any
+ip access-list extended T3-USERS-IN
+ remark Allow DHCP
+ permit udp any eq bootpc any eq bootps
+ remark Allow ICMP
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ remark Allow DNS to local DNS server
+ permit udp any host 10.75.190.2 eq domain
+ permit tcp any host 10.75.190.2 eq domain
+ remark Allow HTTP/HTTPS to DMZ servers
+ permit tcp any host 10.75.190.2 eq www
+ permit tcp any host 10.75.190.2 eq 443
+ permit tcp any host 10.75.190.3 eq www
+ permit tcp any host 10.75.190.3 eq 443
+ remark Block other traffic to DMZ
+ deny ip any 10.75.190.0 0.0.0.255
+ remark Block other traffic to router interface
+ deny ip any host 10.75.184.1
+ remark Allow remaining traffic
+ permit ip any any
+ip access-list extended T3-WIFI-IN
+ permit udp any eq bootpc any eq bootps
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit udp any host 10.75.190.2 eq domain
+ permit tcp any host 10.75.190.2 eq domain
+ permit tcp any host 10.75.190.2 eq www
+ permit tcp any host 10.75.190.2 eq 443
+ permit tcp any host 10.75.190.3 eq www
+ permit tcp any host 10.75.190.3 eq 443
+ deny ip any 10.75.190.0 0.0.0.255
+ deny ip any host 10.75.176.1
+ permit ip any any
+ip access-list extended T3-VOIP-IN
+ remark allow DHCP
+ permit udp any eq bootpc any eq bootps
+ remark Allow TFTP for IP phones
+ permit udp any host 10.75.188.1 eq tftp
+ remark Allow Cisco IP phone registration / ITS
+ permit tcp any host 10.75.188.1 eq 2000
+ remark Allow ICMP
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ remark Allow DNS if needed
+ permit udp any host 10.75.190.2 eq domain
+ permit tcp any host 10.75.190.2 eq domain
+ remark Block other traffic to DMZ
+ deny ip any 10.75.190.0 0.0.0.255
+ remark Block other traffic to router interface
+ deny ip any host 10.75.188.1
+ remark Allow remaining traffic
+ permit ip any any
+!
+!
+!
+!
+!
+dial-peer voice 2 voip
+ destination-pattern 2...
+ session target ipv4:10.75.208.2
+!
+dial-peer voice 4 voip
+ destination-pattern 4...
+ session target ipv4:10.75.208.4
+!
+dial-peer voice 5 voip
+ destination-pattern 5...
+ session target ipv4:10.75.208.5
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 10.75.188.1 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 3001
+!
+ephone-dn 2
+ number 3002
+!
+ephone 1
+ device-security-mode none
+ mac-address 000D.BD91.5002
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0030.A352.CDD3
+ type 7960
+ button 1:2
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
