@@ -72,21 +72,25 @@ interface FastEthernet0/0.807
  encapsulation dot1Q 807
  ip address 10.75.200.1 255.255.252.0
  ip nat inside
+ ip access-group ROUTER_IN in
 !
 interface FastEthernet0/0.808
  encapsulation dot1Q 808
  ip address 10.75.192.1 255.255.248.0
  ip nat inside
+ ip access-group ROUTER_IN in
 !
 interface FastEthernet0/0.809
  encapsulation dot1Q 809
  ip address 10.75.204.1 255.255.254.0
  ip nat inside
+ ip access-group VOIP_IN in
 !
 interface FastEthernet0/0.810
  encapsulation dot1Q 810
  ip address 10.75.206.1 255.255.255.128
  ip nat inside
+ ip access-group DMZ_IN in
  ip access-group DMZ_OUT out
 !
 interface FastEthernet0/1
@@ -123,29 +127,14 @@ ip access-list extended BACKBONE_IN
  deny ip 10.75.206.0 0.0.0.127 any
  permit icmp any any echo
  permit icmp any any echo-reply
- permit tcp any host 10.75.208.4 eq www
- permit tcp any host 10.75.208.4 eq 443
- permit ospf any any
- permit ip any any
-ip access-list extended DMZ_OUT
- permit icmp any any echo
- permit icmp any any echo-reply
  permit udp any host 10.75.206.2 eq domain
+ permit tcp any host 10.75.206.2 eq domain
  permit tcp any host 10.75.206.2 eq www
  permit tcp any host 10.75.206.2 eq 443
  permit tcp any host 10.75.206.3 eq www
  permit tcp any host 10.75.206.3 eq 443
- permit ip 10.75.206.0 0.0.0.127 any
  deny ip any 10.75.206.0 0.0.0.127
- permit ip any any
-ip access-list extended ROUTER_IN
- permit udp any host 255.255.255.255 eq bootps
- permit udp any any eq bootps
- permit udp any host 10.75.204.1 eq tftp
- permit tcp any host 10.75.204.1 eq 2000
  permit ospf any any
- permit icmp any any echo
- permit icmp any any echo-reply
  permit tcp any host 10.75.208.4 eq www
  permit tcp any host 10.75.208.4 eq 443
  deny ip any host 10.75.208.4
@@ -154,6 +143,60 @@ ip access-list extended ROUTER_IN
  deny ip any host 10.75.204.1
  deny ip any host 10.75.206.1
  permit ip any any
+ip access-list extended DMZ_OUT
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit udp any host 10.75.206.2 eq domain
+ permit tcp any host 10.75.206.2 eq domain
+ permit tcp any host 10.75.206.2 eq www
+ permit tcp any host 10.75.206.2 eq 443
+ permit tcp any host 10.75.206.3 eq www
+ permit tcp any host 10.75.206.3 eq 443
+ deny ip any 10.75.206.0 0.0.0.127
+ permit ip any any
+ip access-list extended ROUTER_IN
+ permit udp host 0.0.0.0 host 255.255.255.255 eq bootps
+ deny ip 10.75.204.0 0.0.1.255 any
+ deny ip 10.75.206.0 0.0.0.127 any
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit udp any host 10.75.204.1 eq bootps
+ permit udp any host 255.255.255.255 eq bootps
+ permit udp any host 10.75.204.1 eq tftp
+ permit udp any host 10.75.192.1 eq bootps
+ permit tcp any host 10.75.204.1 eq 2000
+ permit udp any host 10.75.200.1 eq bootps
+ permit tcp any host 10.75.208.4 eq 2000
+ permit tcp any host 10.75.208.4 eq www
+ permit tcp any host 10.75.208.4 eq 443
+ deny ip any host 10.75.208.4
+ deny ip any host 10.75.200.1
+ deny ip any host 10.75.192.1
+ deny ip any host 10.75.204.1
+ deny ip any host 10.75.206.1
+ permit ip any any
+ip access-list extended DMZ_IN
+ permit ip 10.75.206.0 0.0.0.127 any
+ip access-list extended VOIP_IN
+ permit udp host 0.0.0.0 host 255.255.255.255 eq bootps
+ deny ip 10.75.192.0 0.0.7.255 any
+ deny ip 10.75.200.0 0.0.3.255 any
+ deny ip 10.75.206.0 0.0.0.127 any
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ permit udp any host 255.255.255.255 eq bootps
+ permit udp any host 10.75.204.1 eq bootps
+ permit udp any host 10.75.204.1 eq tftp
+ permit tcp any host 10.75.204.1 eq 2000
+ permit udp any host 10.75.204.1 eq 5060
+ permit tcp any host 10.75.204.1 eq 5060
+ permit tcp any host 10.75.204.1 eq www
+ permit tcp any host 10.75.204.1 eq 443
+ deny ip any host 10.75.204.1
+ permit ip any any
+ permit udp any host 10.75.204.1
+ permit icmp any any
+ permit tcp any host 10.75.204.1
 !
 !
 !
@@ -172,8 +215,8 @@ dial-peer voice 5 voip
  session target ipv4:10.75.208.5
 !
 telephony-service
- max-ephones 2
- max-dn 2
+ max-ephones 10
+ max-dn 10
  ip source-address 10.75.204.1 port 2000
  auto assign 1 to 2
 !
@@ -185,15 +228,15 @@ ephone-dn 2
 !
 ephone 1
  device-security-mode none
- mac-address 00E0.8F06.1B85
+ mac-address 0040.0BEE.3E92
  type 7960
- button 1:2
+ button 1:1
 !
 ephone 2
  device-security-mode none
- mac-address 00E0.F7E0.B3C2
+ mac-address 0001.64AD.8712
  type 7960
- button 1:1
+ button 1:2
 !
 line con 0
 !

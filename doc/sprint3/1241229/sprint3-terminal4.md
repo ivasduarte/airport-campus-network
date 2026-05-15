@@ -80,19 +80,11 @@ To allow external access to the internal web services of Terminal 4 without expo
 
 Traffic access policies were implemented using Extended Access Control Lists (ACLs) applied to the router's subinterfaces. The configuration strictly follows the 5 rules of precedence required for the Sprint 3.
 
-### 5.1. Access Control Lists Strategy
-
-| Precedence Rule             | Security Policy Description                                                                                                          | Implemented In |
-|:----------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|:---------------|
-| **1st - Anti-Spoofing**     | Blocks internal T4 IPs arriving from the external backbone.                                                                          | `BACKBONE_IN`  |
-| **2nd - ICMP Permitted**    | Echo requests and echo replies are always permitted.                                                                                 | *All ACLs*     |
-| **3rd - DMZ Protection**    | Blocks all traffic to the DMZ except DNS (.2) and HTTP/HTTPS (.2 and .3). Traffic originating FROM the DMZ is permitted.             | `DMZ_OUT`      |
-| **4th - Router Protection** | Blocks traffic directed to the router itself, excepting required services (DHCP, TFTP, SCCP on port 2000, OSPF, and NAT HTTP/HTTPS). | `ROUTER_IN`    |
-| **5th - Pass-Through**      | The rest passes. General cross-network transit traffic is permitted.                                                                 | *All ACLs*     |
-
-### 5.2. Interfaces Application
+### 5.1. Interfaces Application
 To enforce the strategy above, the ACLs were applied to the following subinterfaces:
 
 * **`BACKBONE_IN`:** Applied on **Fa0/0.797** (Direction: **IN**).
 * **`DMZ_OUT`:** Applied on **Fa0/0.810** (Direction: **OUT**).
-* **`ROUTER_IN`:** Applied on **Fa0/0.807**, **Fa0/0.808**, and **Fa0/0.809** (Direction: **IN**).
+* **`DMZ_IN`:** Applied on **Fa0/0.810** (Direction: **IN**).
+* **`ROUTER_IN`:** Applied on **Fa0/0.807**, **Fa0/0.808** (Direction: **IN**).
+* **`VOIP_IN`:** Applied on **Fa0/0.809** (Direction: **IN**)
