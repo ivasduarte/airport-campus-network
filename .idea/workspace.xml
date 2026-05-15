@@ -12,6 +12,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="566c23ca-560e-4c73-8c9a-871b9be2b332" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="566c23ca-560e-4c73-8c9a-871b9be2b332" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/joaom/OneDrive/Ambiente de Trabalho/rcomp-25-26-DI-G2" value="3AGDUN1M32xIs3blHqBexNV2hiw" />
@@ -19,7 +37,6 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="54" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +80,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/joaom/OneDrive/Ambiente de Trabalho/rcomp-25-26-DI-G2/doc/sprint3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/joaom/OneDrive/Ambiente de Trabalho/rcomp-25-26-DI-G2/doc/sprint3/1241166&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -74,6 +91,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joaom\OneDrive\Ambiente de Trabalho\rcomp-25-26-DI-G2\doc\sprint3\1241166" />
       <recent name="C:\Users\joaom\OneDrive\Ambiente de Trabalho\rcomp-25-26-DI-G2\doc\sprint3" />
       <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint2\1241229" />
       <recent name="C:\Users\diogo\OneDrive\Documentos\GitHub\rcomp-25-26-DI-G2\doc\sprint1\1241229\assets" />
@@ -82,6 +100,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ivadu\OneDrive\Documents\GitHub\rcomp-25-26-DI-G2\doc\sprint2\1241176\assets" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -147,6 +173,7 @@
       <workItem from="1776081207189" duration="808000" />
       <workItem from="1776260533722" duration="627000" />
       <workItem from="1776447075013" duration="1095000" />
+      <workItem from="1778868985256" duration="1845000" />
     </task>
     <servers />
   </component>
