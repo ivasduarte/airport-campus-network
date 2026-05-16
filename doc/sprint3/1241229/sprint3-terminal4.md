@@ -6,7 +6,7 @@ RCOMP 2025-2026: Project 1 Sprint 3 Member 1241229
 1. [Dynamic Routing (OSPF)](#1-dynamic-routing-ospf)
 2. [Local DNS and HTTP Services](#2-local-dns-and-http-services)
 3. [VoIP Service Configuration](#3-voip-service-configuration)
-4. [Static NAT Configuration](#4-static-nat-configuration)
+4. [Static NAT Configuration](#4-nat-configuration)
 5. [Static Firewall (ACLs)](#5-static-firewall-acls)
 
 ---
