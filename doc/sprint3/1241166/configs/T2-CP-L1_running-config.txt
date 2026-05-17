@@ -16,21 +16,27 @@ spanning-tree mode pvst
 spanning-tree extend system-id
 !
 interface GigabitEthernet4/1
+ switchport mode access
  switchport voice vlan 801
 !
 interface GigabitEthernet5/1
  switchport access vlan 800
+ switchport mode access
 !
 interface GigabitEthernet6/1
  switchport access vlan 799
+ switchport mode access
 !
 interface GigabitEthernet7/1
  switchport access vlan 798
+ switchport mode access
 !
 interface GigabitEthernet8/1
  switchport access vlan 802
+ switchport mode access
 !
 interface GigabitEthernet9/1
+ switchport mode trunk
 !
 interface Vlan1
  no ip address

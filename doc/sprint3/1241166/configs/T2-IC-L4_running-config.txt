@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname T2-IC-L4
+hostname Switch
 !
 !
 !
@@ -15,6 +15,9 @@ ptp clock transparent domain 0 profile default
 spanning-tree mode pvst
 spanning-tree extend system-id
 !
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
 interface FastEthernet8/1
  switchport mode trunk
 !
@@ -23,9 +26,6 @@ interface FastEthernet9/1
 interface Vlan1
  no ip address
  shutdown
-!
-interface Vlan798
- ip address 10.75.210.3 255.255.254.0
 !
 !
 !
